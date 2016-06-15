@@ -1,2 +1,2 @@
 # RSSalg-software
-A tool for application of co-training in single-view datasets
+A tool for application of co-training on single-view datasets
