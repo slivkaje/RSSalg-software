@@ -267,7 +267,7 @@ public class GAThresholdOptimiser {
     /**
      * Select the candidate by performing roulette wheel [Back 1991] selection - the probability of selecting the candidate for reproduction is proportional to its fitness
      * <p>
-     * Back and F. Hoffmeister. Extended Selection Mechanisms in Genetic Algorithm. In: Belew, R. K. & Brooker, L. B., editors, Proc. 4th International Conference on Genetic Algorithm, pp. 92-99, 1991.
+     * Back and F. Hoffmeister. Extended Selection Mechanisms in Genetic Algorithm. In: Belew, R. K. and Brooker, L. B., editors, Proc. 4th International Conference on Genetic Algorithm, pp. 92-99, 1991.
      * @return the selected candidate
      */
     private Candidate rouletteSelection(){		

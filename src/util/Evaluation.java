@@ -183,6 +183,7 @@ public class Evaluation {
 	 * @param classificationModel WEKA classification model (untrained classifier)
 	 * @param trainingSet data to train the model on 
 	 * @param testSet test set for the evaluation of the trained model
+	 * @param recordPredictions whether to record the classifier prediction (confidences) for each instance
 	 * @return classification results
 	 * @throws Exception
 	 * <ul>
@@ -212,6 +213,7 @@ public class Evaluation {
 	 * @param classifiers array of training models to be used (untrained classifiers)
 	 * @param trainingSet the different views of the training (labeled) set
 	 * @param testSet the different views of the test set to be used for the trained classifier evaluation
+	 * @param recordPredictions whether to record the classifier prediction (confidences) for each instance
 	 * @return classification result
 	 * @throws Exception
 	 * <ul>

@@ -448,8 +448,8 @@ public class DataSettingsDialog extends JDialog {
 	
 	
 	/**
-	 * Create the frame.
-	 * @throws ParseException 
+	 * Create the frame. 
+	 * @param owner parent dialogue
 	 */
 	public DataSettingsDialog(JFrame owner) {
 		super(owner);

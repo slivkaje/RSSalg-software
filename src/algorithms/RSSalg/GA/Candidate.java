@@ -125,7 +125,7 @@ public class Candidate implements Comparable<Candidate>{
 	}
 	/**
 	 * Sets the ids and predictions for instances eliminated from the final training set (by candidate thresholds)
-	 * @param predictions map (key: id, value: the predicted class) that represents predictions eliminated from the final training set
+	 * @param leftOut predictions map (key: id, value: the predicted class) that represents predictions eliminated from the final training set
 	 */
 	private void setLeftOut(Map<Double, String> leftOut) {
 		this.leftOut = leftOut;

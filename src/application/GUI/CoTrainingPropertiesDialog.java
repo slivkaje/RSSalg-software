@@ -173,6 +173,7 @@ public class CoTrainingPropertiesDialog extends JDialog {
 	
 	/**
 	 * Create the dialog.
+	 * @param owner parent dialogue
 	 */
 	public CoTrainingPropertiesDialog(JFrame owner) {
 		super(owner, true);

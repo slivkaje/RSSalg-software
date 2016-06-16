@@ -97,7 +97,7 @@ public class FeatureSplit {
 
 	/**
 	 * Compares two feature splits based on the view sets they contain. Two feature splits are equal if their view sets are equal even if their ordering (view indices) 
-	 * is permuted, e.g. split1[1st view: view1, 2nd view: view2], split2[1st view: view2, 2nd view: view1] => splits split1 and split2 are equal
+	 * is permuted, e.g. split1[1st view: view1, 2nd view: view2], split2[1st view: view2, 2nd view: view1] =&gt; splits split1 and split2 are equal
 	 */
 	@Override
 	public boolean equals(Object obj) {

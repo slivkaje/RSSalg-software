@@ -252,6 +252,7 @@ public class GASettingsDialog extends JDialog {
 
 	/**
 	 * Create the dialog.
+	 * @param owner parent dialogue
 	 */
 	public GASettingsDialog(JFrame owner) {
 		super(owner);

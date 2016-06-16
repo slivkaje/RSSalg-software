@@ -27,7 +27,7 @@ public class InstancesManipulation {
 	 * Writes the dataset to an ARFF file
 	 * @param fileName path to dataset file
 	 * @param instances dataset to write to an ARFF file    
-	 * @throws exception if the file cannot be written to the desired location (e.g. the folder is missing)
+	 * @throws IOException if the file cannot be written to the desired location (e.g. the folder is missing)
 	 */
 	public static void writeArff(String fileName, Instances instances) throws IOException {
 		FileWriter out = new FileWriter(fileName);
@@ -470,6 +470,7 @@ public class InstancesManipulation {
 	 * @param origin the dataset to copy attributes from
 	 * @param destination the dataset to copy attributes to
 	 * @param indices inidices of attributes to copy (counting from 1)
+	 * @return modified Instances object (datasest with added (copied) attributes)
 	 * @throws Exception if there was an error copying the attributes (e.g. maximum attribute index is n and one of the supplied attribute indices is greater than n)
 	 */
 	public static Instances copyAttributes(Instances origin, Instances destination, Set<Integer> indices) throws Exception{
@@ -645,7 +646,7 @@ public class InstancesManipulation {
 	 * @param dataset different views of one dataset
 	 * @return dataset with a unique attribute set
 	 */
-	public static Instances getMerged(Instances[] dataset) throws Exception{
+	public static Instances getMerged(Instances[] dataset) {
 		if(dataset.length == 1) // already just one view
 			return dataset[0];
 		

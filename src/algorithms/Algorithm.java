@@ -35,7 +35,7 @@ public abstract class Algorithm {
 	protected ClassifierEnsemble classifierTestData = null; 
 	
 	/**
-	 * Running time of the algorithm (duration of running the <code>run<code> method)
+	 * Running time of the algorithm (duration of running the <code>run</code> method)
 	 */
 	protected long runningTime;
 	
@@ -137,7 +137,7 @@ public abstract class Algorithm {
 	 * with multiple feature splits and record the statistic. Then, user can run RSSalg by supplying the recorded statistic (in order to use
 	 * exactly the same classifiers created in co-training with multiple random splits experiment). In such case, RSSalg will not run 
 	 * co-training with multiple random splits again but simply aggregate the recorded votes in order to create the final classifier.  
-	 * @param classifiers
+	 * @param classifiers list of created classifier ensembles
 	 */
 	protected void setClassifiers(ClassifierEnsembleList classifiers){
 		this.classifiers = classifiers;

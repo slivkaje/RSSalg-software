@@ -7,12 +7,12 @@ import featureSplit.RandomSplit;
  * merging all the views in the unique feature set). It is assumed that the feature name is unique in the dataset.
  * <p> 
  * Note: the feature index is dependent on the ordering of the views that are being merged. Expected usage:  
- * <ul>
- * <li type="1">create an Instances object by moving all features to the first view. Each feature is assigned an index (acquired from the Instances object)
- * <li type="1">create a feature split - a {@link FeatureSplit} object
- * <li type="1">use {@link FeatureSplit#getFeatureIndicesForView(int)} method to get the indices of the features in original Instances object (from the 1st step) 
+ * <ol>
+ * <li>create an Instances object by moving all features to the first view. Each feature is assigned an index (acquired from the Instances object)
+ * <li>create a feature split - a {@link FeatureSplit} object
+ * <li>use {@link FeatureSplit#getFeatureIndicesForView(int)} method to get the indices of the features in original Instances object (from the 1st step) 
  * 			    that should be moved to the desired view  
- * </ul> 
+ * </ol> 
  * For example, see the implementation of {@link RandomSplit#splitDatasets} method
  */
 public class Feature {

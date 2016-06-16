@@ -68,9 +68,6 @@ public class RSSalgFrame extends JFrame {
 	private MessageConsole mc;
 	private SwingWorker worker;
 	
-	/**
-	 * Launch the application.
-	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {

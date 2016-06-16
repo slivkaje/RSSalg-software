@@ -200,7 +200,8 @@ public class CVSettingsDialog extends JDialog {
 	
 	/**
 	 * Create the dialog.
-	 * @throws Exception 
+	 * @param owner parent dialogue
+	 * @throws Exception if loading a preset experiment and co-training data cannot be loaded from the specified folder (missing or corrupt files)
 	 */
 	public CVSettingsDialog(JFrame owner) throws Exception {
 		super(owner);

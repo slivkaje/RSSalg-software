@@ -177,7 +177,7 @@ public class DatasetSettings {
 
 	/**
 	 * Note: set results folder first!
-	 * @param loadPresetExperiment
+	 * @param loadPresetExperiment if true, should load a previously created experiment (not create a new one) 
 	 */
 	private void setLoadPresetExperiment(boolean loadPresetExperiment) {
 		this.loadPresetExperiment = loadPresetExperiment;
@@ -197,7 +197,7 @@ public class DatasetSettings {
 	 * Reads all data settings from properties file	 
 	 * 
 	 * @param PropertiesFile Path to the properties file to read from	 
-	 * @throws Exception 
+	 * @throws Exception loading properties failed, e.g. properties file not found or error reading a property (missing or wrong type)
 	 */
 	public void readProperties(String PropertiesFile) throws Exception {
 		Properties properties = null;

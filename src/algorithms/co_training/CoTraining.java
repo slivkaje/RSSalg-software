@@ -28,7 +28,7 @@ import experimentSetting.ExperimentSettings;
  * <p>
  * A. Blum, T. Mitchell, "Combining labeled and unlabeled data with co-training", COLT: Proceedings of the Workshop on Computational Learning Theory, 
  * Morgan Kaufmann, 1998, p. 92-100.
- * <p>
+ * </p>
  */
 public class CoTraining extends Algorithm{
 	/**
@@ -182,7 +182,7 @@ public class CoTraining extends Algorithm{
 	
 	/**
 	 * Used for writing the co-training log: calculates all desired measures for all idividual views and the combined view.
-	 * @return Line to write to co-training log file at location <code>logFileLocation<code>
+	 * @return Line to write to co-training log file at location <code>logFileLocation</code>
 	 */
 	private String getMeasuesString(){
 		ClassificationResult resView1 = data.testLabeled(0, false);

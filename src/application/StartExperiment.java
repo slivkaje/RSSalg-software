@@ -80,8 +80,7 @@ public class StartExperiment {
 	
 	/**
 	 * Sets the cross-validation experiment. Depending on the properties settings, reads a preset cross-validation experiment or 
-	 * prepares the data for a new cross-validation experiment 
-	 * @return prepared fold data for cross-validation (each fold separated in labeled, unlabeled and test data) 
+	 * prepares the data for a new cross-validation experiment  
 	 * @throws Exception if:
 	 * <ul>
 	 * <li> the ARFF file is missing
@@ -141,7 +140,6 @@ public class StartExperiment {
 	
 	/**
 	 * Runs the cross-validation experiment
-	 * @param data prepared fold data for cross-validation (each fold separated in labeled, unlabeled and test data)
 	 * @throws Exception if:
 	 * <ul>
 	 * <li>There was an error reading/writing the results from/to Results.xml file

@@ -98,7 +98,8 @@ public class PropertiesReader {
 	/**
 	 * Reads Instances from an .ARFF file (Note: the name of the class attribute must be specified before calling this)
 	 * @param properties The given properties
-	 * @param key key for the value to be retrieved           
+	 * @param key key for the value to be retrieved  
+	 * @throws Exception if the key parameter is missing          
 	 * @return the Instances object
 	 */
 	public static Instances readArff(Properties properties, String key) throws Exception {		
@@ -116,6 +117,7 @@ public class PropertiesReader {
 	 * @param properties The given properties
 	 * @param key key for the value to be retrieved           
 	 * @return instance of the class as <code>Object</code>	 
+	 * @throws Exception if the key is missing
 	 */
 	public static Object readObjectParam(Properties properties, String key) throws Exception {
 		String className = readStringParam(properties, key);
@@ -166,6 +168,7 @@ public class PropertiesReader {
 	 * @param properties The given properties
 	 * @param key key for the value to be retrieved           
 	 * @return list of String values	 
+	 * @throws Exception if the key is missing
 	 */ 
 	public static List<String> readStringListParam(Properties properties, String key) throws Exception{
 		List<String> strValuesList = new ArrayList<String>();
@@ -184,6 +187,7 @@ public class PropertiesReader {
 	 * @param properties The given properties
 	 * @param key key for the value to be retrieved           
 	 * @return array of int values
+	 * @throws Exception if the key is missing or the value is not array of integers
 	 */  
 	public static int[] readIntArrayParam(Properties properties, String key) throws Exception {
 		String[] strValues = readStringParam(properties, key).split(" ");		

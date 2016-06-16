@@ -100,7 +100,7 @@ public class CoTrainingData {
 	/**
 	 * Loads <code>CoTrainingData</code> object from the given folder.
 	 * <p>
-	 * Assumes that the folder contains 4 x <no of views> arff files (e.g. for 2 views: labeled_view0.arff, labeled_view1.arff, 
+	 * Assumes that the folder contains 4 x &lt;no of views&gt; arff files (e.g. for 2 views: labeled_view0.arff, labeled_view1.arff, 
 	 * unlabeled_view0.arff, unlabeled_view1.arff, test_view0.arff, test_view1.arff, pool_view0.arff, pool_view1.arff).
 	 * Pool files (u') are only read if they exist.
 	 * @param path path to the folder that contains the files needed to populate CoTrainingData object
@@ -177,7 +177,7 @@ public class CoTrainingData {
 	/**
 	 * Saves the current state of the CoTrainingData object to the given folder
 	 * <p>
-	 * Data is saved as 4 x <no of views> arff files (e.g. for 2 views: labeled_view0.arff, labeled_view1.arff, 
+	 * Data is saved as 4 x &lt;no of views&gt; arff files (e.g. for 2 views: labeled_view0.arff, labeled_view1.arff, 
 	 * unlabeled_view0.arff, unlabeled_view1.arff, test_view0.arff, test_view1.arff, pool_view0.arff, pool_view1.arff).	  
 	 * Pool files (u') are not saved if the pool is empty
 	 * 
@@ -202,7 +202,7 @@ public class CoTrainingData {
 	/**
 	 * Loads <code>CoTrainingData</code> object from the given folder
 	 * <p>
-	 * Assumes that the data is saved as 4 x <no of views> arff files (e.g. for 2 views: labeled_view1.arff, labeled_view2.arff, 
+	 * Assumes that the data is saved as 4 x &lt;no of views&gt; arff files (e.g. for 2 views: labeled_view1.arff, labeled_view2.arff, 
 	 * unlabeled_view1.arff, unlabeled_view2.arff, test_view1.arff, test_view2.arff, pool_view1.arff, pool_view2.arff).
 	 * Pool files (u') are only read if they exist
 	 *   

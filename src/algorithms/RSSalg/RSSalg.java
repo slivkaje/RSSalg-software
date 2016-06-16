@@ -35,7 +35,7 @@ import featureSplit.DifferentRandomSplitsSplitter;
  * properties. For example, RSSalg experiment is run by specifying  {@link RSSalgCandidateEvaluator} in the experiment properties, while RSSalg<sub>best</sub> experiment 
  * is run by using {@link TestSetAccuracyCandidateEvaluator}. Supply the AccuracyMeasure to the CandidateEvaluatorIF to run the RSSalg and RSSalg<sub>best</sub>
  * experiments from the paper (property optimizationMeasure in genetic algorithm properties).
- * <p> 
+ * </p> 
  */
 public class RSSalg extends Algorithm{
 	/**

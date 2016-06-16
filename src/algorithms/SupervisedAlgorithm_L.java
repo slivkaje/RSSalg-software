@@ -10,7 +10,7 @@ import algorithms.co_training.CoTrainingData;
  * <p>
  * This is the L<sub>acc</sub> algorithm described in paper J. Slivka, A. Kovacevic, Z. Konjovic: "Combining Co-Training with Ensemble Learning for Application on Single-View Natural
  * Language Datasets". Acta Polytechnica Hungarica 10 (2)).
- * <p>
+ *</p>
  */
 public class SupervisedAlgorithm_L extends Algorithm{	
 

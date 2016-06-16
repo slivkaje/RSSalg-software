@@ -255,6 +255,7 @@ public class ExperimentSettingsDialog extends JDialog {
 
 	/**
 	 * Create the dialog.
+	 * @param owner parent dialogue
 	 */
 	public ExperimentSettingsDialog(JFrame owner) {
 		super(owner, true);
