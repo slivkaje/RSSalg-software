@@ -1,5 +1,6 @@
 package application;
 
+import java.awt.EventQueue;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -13,6 +14,7 @@ import setExperiment.CrossValidationSeparator;
 import algorithms.Algorithm;
 import algorithms.RSSalg.resultStatistic.ClassifierEnsembleList;
 import algorithms.co_training.CoTrainingData;
+import application.GUI.RSSalgFrame;
 import classificationResult.ClassificationResult;
 import classificationResult.measures.MeasureIF;
 import experimentSetting.CVSettings;
@@ -290,27 +292,46 @@ public class StartExperiment {
 	}
 
 	public static void main(String[] args) throws Exception {
-		if ((args == null) || (args.length != 2)) {
-			System.out.println("Usage: java -jar RSSalg.jar <properties_folder> <experiment_properties>");
-			System.out.println("\t<properties_folder>: folder containing property files (data.properties, cv.properties, co-training.properties and GA.properties)");
-			System.out.println("\t<experiment_properties>: property file containing the experiment settings.");
+		if ((args.length != 0) && (args.length != 2)) {
+			System.out.println("Usage: ");			
 			System.out.println();
-			System.out.println("Example for running the supervised experiment L on News2x2 dataset: properties folder is  /data/News2x2/experiment/ and experiment properties are ./data/News2x2/experiment experiment_L.properties:");
-			System.out.println("\tjava -jar RSSalg.jar ./data/News2x2/experiment experiment_L.properties");
+			System.out.println("1. In console:");
+			System.out.println("\tjava -jar RSSalg.jar <properties_folder> <experiment_properties>");
+			System.out.println("\t\t<properties_folder>: folder containing property files (data.properties, cv.properties, co-training.properties and GA.properties)");
+			System.out.println("\t\t<experiment_properties>: property file containing the experiment settings.");			
+			System.out.println();
+			System.out.println("\tExample:");
+			System.out.println("\t\tjava -jar RSSalg.jar ./data/News2x2/experiment experiment_L.properties");
+			System.out.println();
+			System.out.println("2. Swing application:");
+			System.out.println("\tjava -jar RSSalg.jar");
 			System.exit(0);
 		}else{
 			
-//			setExperiment("./data/News2x2/experiment", "experiment_L.properties");
-//			setExperiment("./data/News2x2/experiment", "experiment_All.properties");
-//			setExperiment("./data/News2x2/experiment", "experiment_RSSalg.properties");
-//			setExperiment("./data/News2x2/experiment", "experiment_RSSalg_best.properties");
-//			setExperiment("./data/News2x2/experiment", "experiment_Co-training_Random.properties");
-//			setExperiment("./data/News2x2/experiment", "experiment_MV.properties");
-//			setExperiment("./data/News2x2/experiment", "experiment_Co-training_Natural.properties");
-					
-			setExperiment(args[0], args[1]);
-			StartExperiment experimentStarter = new StartExperiment();
-			experimentStarter.run();
+			if(args.length == 2){
+//				setExperiment("./data/News2x2/experiment", "experiment_L.properties");
+//				setExperiment("./data/News2x2/experiment", "experiment_All.properties");
+//				setExperiment("./data/News2x2/experiment", "experiment_RSSalg.properties");
+//				setExperiment("./data/News2x2/experiment", "experiment_RSSalg_best.properties");
+//				setExperiment("./data/News2x2/experiment", "experiment_Co-training_Random.properties");
+//				setExperiment("./data/News2x2/experiment", "experiment_MV.properties");
+//				setExperiment("./data/News2x2/experiment", "experiment_Co-training_Natural.properties");
+				
+				setExperiment(args[0], args[1]);
+				StartExperiment experimentStarter = new StartExperiment();
+				experimentStarter.run();
+			}else{
+				EventQueue.invokeLater(new Runnable() {
+					public void run() {
+						try {
+							RSSalgFrame frame = new RSSalgFrame();
+							frame.setVisible(true);
+						} catch (Exception e) {
+							e.printStackTrace();
+						}
+					}
+				});
+			}
 			
 		}
 	}
