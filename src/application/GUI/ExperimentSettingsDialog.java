@@ -117,7 +117,7 @@ public class ExperimentSettingsDialog extends JDialog {
 		}
 		
 		chckbxLoadClassifiers.setSelected(ExperimentSettings.getInstance().isLoadClassifierStatistic());
-		if(chckbxLoadClassifiers.isSelected())
+		if(chckbxLoadClassifiers.isSelected() || alg == "MV")
 			tfLoadClassifiersFile.setText(ExperimentSettings.getInstance().getClassifiersFilename());
 		else{
 			if(!alg.equals("All") && !alg.equals("L"))
