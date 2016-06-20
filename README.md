@@ -14,7 +14,9 @@ with Ensemble Learning for Application on Single-View Natural Language Datasets"
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. 
+
+The illustrative example and detailed instructions of running RSSalg software is located in /docs/IllustrativeExample.pdf
 
 ### Prerequisities
 
@@ -27,24 +29,27 @@ To install Java go to http://www.oracle.com/technetwork/indexes/downloads/index.
 
 ### Running
 
-In order to run RSS-alg software you can either load the source code from the "src" folder into your favorite IDE, or run the executable distribution, located in the "dist" folder, by typing the following command in the terminal:
+In order to run RSS-alg software you can run the executable distribution, located in the "dist" folder, by typing the following command in the terminal:
  
 1. Running RSSalg software in console:
 	```
 	java -jar RSSalg.jar <properties_folder> <experiment_properties>
 	```
 	where 
-	* `properties_folder` is the folder containing the following property files: 
+	* `properties_folder` is the folder containing the following property files (needed for execution of all experiments): 
 		* data.properties - parameters describing the dataset used in the experiment
 		* cv.properties - parameters for setting the X-fold-cross validation experiment
 		* co-training.properties - parameters of the underlying co-training algorithm
 		* GA.properties - properties of the genetic algorithm used in RSSalg threshold optimization
-	* `experiment_properties` is the property file containing the desired experiment settings
+	* `experiment_properties` is the property file containing the containing the desired settings for concrete experiment that should be run
 
 2. Running RSSalg software as swing application
 	```
 	java -jar RSSalg.jar
+	
 	```
+
+Optionally, you load the source code from the "src" folder into your favorite IDE. Note that RSSalg software implementation depends on Weka (version 3.4 or above). Thus, you will need to add weka.jar library into your project (weka.jar can be dowloaded from http://www.cs.waikato.ac.nz/ml/weka/downloading.html). The starting point for running RSSalg software is the class `StartExperiment`, located inside `src/application`.
 
 ## Author
 
