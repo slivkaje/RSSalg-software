@@ -160,8 +160,13 @@ public class DatasetSettings {
 		if(resultFolder == null)
 			throw new Exception("ERROR: missing path to result folder");
 		File folder = new File(resultFolder);
-		if(!folder.isDirectory())
-			throw new Exception("ERROR: result folder '" + resultFolder + "' not a valid directory");
+		if(!folder.exists()){
+			System.out.println("Creating directory \"" + resultFolder + "\" for recording results.");
+			boolean created = folder.mkdir();
+			if(!created){
+				throw new Exception("ERROR: Directory for recording results \"" + resultFolder + "\" could not be created.");
+			}
+		}
 		this.resultFolder = resultFolder;
 	}
 	

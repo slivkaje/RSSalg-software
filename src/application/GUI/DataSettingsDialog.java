@@ -226,7 +226,7 @@ public class DataSettingsDialog extends JDialog {
 				e1.printStackTrace();
 			}			
 		}else{
-			tfResultsFolder.setText("");
+			tfResultsFolder.setText("./data/result");
 			
 			int noViews = Integer.parseInt(tfNoViews.getText());
 			for(int i=1; i<=noViews; i++)
@@ -274,12 +274,18 @@ public class DataSettingsDialog extends JDialog {
 		try{
 			if(views.size() == 0)
 				throw new Exception("At least one view should be specified.");
-			
-			
-			
+						
 			File resultsFolder = new File(tfResultsFolder.getText());
-			if(!resultsFolder.exists() || !resultsFolder.isDirectory())
-				throw new Exception("Error saving data properties: results folder is not a valid directory.");
+//			if(!resultsFolder.isDirectory())
+//				throw new Exception("Error saving data properties: value entered as results folder \"" + tfResultsFolder.getText() + "\" is not a valid directory.");
+			
+			if(!resultsFolder.exists()){
+//				System.out.println("Creating directory \"" + resultFolder + "\" for recording results.");
+				boolean created = resultsFolder.mkdir();
+				if(!created){
+					throw new Exception("ERROR: Directory for recording results \"" + resultsFolder + "\" could not be created.");
+				}
+			}
 			
 			String classAtt = "";
 			if(cbClassAtt.getSelectedIndex() == -1){
@@ -584,7 +590,9 @@ public class DataSettingsDialog extends JDialog {
 				if(returnVal == JFileChooser.APPROVE_OPTION) {								
 					addDataFile(chooser.getSelectedFile().getAbsoluteFile());
 					if(viewsTabeModel.getRowCount() == 2)
-						btnAddDataFile.setEnabled(false);
+						btnAddDataFile.setEnabled(false);					
+					if(chooser.getSelectedFile().getParent() != null)
+						tfResultsFolder.setText(chooser.getSelectedFile().getParent() + "\\result");					
 				}				
 			}
 		});
@@ -717,7 +725,7 @@ public class DataSettingsDialog extends JDialog {
 		panelLearningModels.add(chckbxUseForAll);
 			
 		tfRandomSeed = new JFormattedTextField(NumberFormat.getIntegerInstance());
-		tfRandomSeed.setText("42");
+		tfRandomSeed.setText("2016");
 		
 		tfRandomSeed.setBounds(207, 76, 88, 22);
 		
