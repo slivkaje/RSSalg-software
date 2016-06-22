@@ -278,7 +278,7 @@ public class ExperimentSettingsDialog extends JDialog {
 						lblFileName.setEnabled(true);
 						btnBrowse.setEnabled(true);						
 					}else if(algorithm.contains("RSSalg")){						
-						chckbxLoadClassifiers.setSelected(true);
+						chckbxLoadClassifiers.setSelected(false);
 						chckbxLoadClassifiers.setEnabled(true);							
 						if(!tfLoadClassifiersFile.getText().equals("")){
 							ClassifierEnsembleList cl = new ClassifierEnsembleList();
@@ -290,7 +290,7 @@ public class ExperimentSettingsDialog extends JDialog {
 							tfNoSplits.setText("" + cl.getEnsembles().size());
 						}
 						lblFileName.setEnabled(true);
-						btnBrowse.setEnabled(true);						
+						btnBrowse.setEnabled(false);						
 					}else{						
 						chckbxLoadClassifiers.setSelected(false);
 						chckbxLoadClassifiers.setEnabled(false);
