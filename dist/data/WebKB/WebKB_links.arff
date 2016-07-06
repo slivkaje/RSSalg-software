@@ -1,0 +1,1256 @@
+@relation 'C__eclipse_workspace_MIT_2011_05_31_._data_WebKB_inlinks_text-weka.filters.unsupervised.attribute.StringToWordVector-R1-W2000-prune-rate-1.0-C-T-I-N0-L-S-stemmerweka.core.stemmers.SnowballStemmer-M1-tokenizerweka.core.tokenizers.WordTokenizer -delimiters \" \\r\\n\\t.,;:\\\'\\\"()?!\"'
+
+@attribute cs_inlinks numeric
+@attribute page_inlinks numeric
+@attribute home_inlinks numeric
+@attribute cse_inlinks numeric
+@attribute computer_inlinks numeric
+@attribute back_inlinks numeric
+@attribute section_inlinks numeric
+@attribute systems_inlinks numeric
+@attribute prof_inlinks numeric
+@attribute programming_inlinks numeric
+@attribute group_inlinks numeric
+@attribute homepage_inlinks numeric
+@attribute project_inlinks numeric
+@attribute david_inlinks numeric
+@attribute personal_inlinks numeric
+@attribute introduction_inlinks numeric
+@attribute science_inlinks numeric
+@attribute department_inlinks numeric
+@attribute system_inlinks numeric
+@attribute research_inlinks numeric
+@attribute operating_inlinks numeric
+@attribute james_inlinks numeric
+@attribute michael_inlinks numeric
+@attribute engineering_inlinks numeric
+@attribute return_inlinks numeric
+@attribute uw_inlinks numeric
+@attribute web_inlinks numeric
+@attribute advanced_inlinks numeric
+@attribute john_inlinks numeric
+@attribute professor_inlinks numeric
+@attribute university_inlinks numeric
+@attribute paul_inlinks numeric
+@attribute report_inlinks numeric
+@attribute architecture_inlinks numeric
+@attribute brian_inlinks numeric
+@attribute dave_inlinks numeric
+@attribute eric_inlinks numeric
+@attribute mike_inlinks numeric
+@attribute parallel_inlinks numeric
+@attribute robert_inlinks numeric
+@attribute annual_inlinks numeric
+@attribute wang_inlinks numeric
+@attribute andrew_inlinks numeric
+@attribute artificial_inlinks numeric
+@attribute computing_inlinks numeric
+@attribute database_inlinks numeric
+@attribute fall_inlinks numeric
+@attribute graphics_inlinks numeric
+@attribute greg_inlinks numeric
+@attribute intelligence_inlinks numeric
+@attribute jeff_inlinks numeric
+@attribute jeffrey_inlinks numeric
+@attribute wisconsin_inlinks numeric
+@attribute design_inlinks numeric
+@attribute information_inlinks numeric
+@attribute jim_inlinks numeric
+@attribute lab_inlinks numeric
+@attribute language_inlinks numeric
+@attribute languages_inlinks numeric
+@attribute machine_inlinks numeric
+@attribute martin_inlinks numeric
+@attribute spring_inlinks numeric
+@attribute chen_inlinks numeric
+@attribute dan_inlinks numeric
+@attribute laboratory_inlinks numeric
+@attribute lee_inlinks numeric
+@attribute autumn_inlinks numeric
+@attribute carl_inlinks numeric
+@attribute charles_inlinks numeric
+@attribute class_inlinks numeric
+@attribute distributed_inlinks numeric
+@attribute learning_inlinks numeric
+@attribute lecture_inlinks numeric
+@attribute multimedia_inlinks numeric
+@attribute software_inlinks numeric
+@attribute huang_inlinks numeric
+@attribute richard_inlinks numeric
+@attribute scott_inlinks numeric
+@attribute steve_inlinks numeric
+@attribute chris_inlinks numeric
+@attribute click_inlinks numeric
+@attribute communication_inlinks numeric
+@attribute cst_inlinks numeric
+@attribute data_inlinks numeric
+@attribute dr_inlinks numeric
+@attribute network_inlinks numeric
+@attribute performance_inlinks numeric
+@attribute susan_inlinks numeric
+@attribute todd_inlinks numeric
+@attribute cornell_inlinks numeric
+@attribute jonathan_inlinks numeric
+@attribute liu_inlinks numeric
+@attribute mark_inlinks numeric
+@attribute sciences_inlinks numeric
+@attribute steven_inlinks numeric
+@attribute zhang_inlinks numeric
+@attribute algorithms_inlinks numeric
+@attribute analysis_inlinks numeric
+@attribute comp_inlinks numeric
+@attribute compiler_inlinks numeric
+@attribute compilers_inlinks numeric
+@attribute computers_inlinks numeric
+@attribute csece_inlinks numeric
+@attribute digital_inlinks numeric
+@attribute directory_inlinks numeric
+@attribute highperformance_inlinks numeric
+@attribute link_inlinks numeric
+@attribute miller_inlinks numeric
+@attribute networks_inlinks numeric
+@attribute organization_inlinks numeric
+@attribute practicum_inlinks numeric
+@attribute programs_inlinks numeric
+@attribute sci_inlinks numeric
+@attribute theory_inlinks numeric
+@attribute vision_inlinks numeric
+@attribute yannis_inlinks numeric
+@attribute adam_inlinks numeric
+@attribute anderson_inlinks numeric
+@attribute andy_inlinks numeric
+@attribute dept_inlinks numeric
+@attribute douglas_inlinks numeric
+@attribute kevin_inlinks numeric
+@attribute larry_inlinks numeric
+@attribute li_inlinks numeric
+@attribute main_inlinks numeric
+@attribute nick_inlinks numeric
+@attribute shapiro_inlinks numeric
+@attribute tba_inlinks numeric
+@attribute thomas_inlinks numeric
+@attribute ut_inlinks numeric
+@attribute utcs_inlinks numeric
+@attribute washington_inlinks numeric
+@attribute william_inlinks numeric
+@attribute www_inlinks numeric
+@attribute architectures_inlinks numeric
+@attribute computational_inlinks numeric
+@attribute databases_inlinks numeric
+@attribute de_inlinks numeric
+@attribute foundations_inlinks numeric
+@attribute implementation_inlinks numeric
+@attribute index_inlinks numeric
+@attribute info_inlinks numeric
+@attribute internet_inlinks numeric
+@attribute jerry_inlinks numeric
+@attribute kay_inlinks numeric
+@attribute lane_inlinks numeric
+@attribute lawrence_inlinks numeric
+@attribute marvin_inlinks numeric
+@attribute mary_inlinks numeric
+@attribute modeling_inlinks numeric
+@attribute networking_inlinks numeric
+@attribute offering_inlinks numeric
+@attribute peterson_inlinks numeric
+@attribute previous_inlinks numeric
+@attribute sally_inlinks numeric
+@attribute seminar_inlinks numeric
+@attribute skrentny_inlinks numeric
+@attribute structures_inlinks numeric
+@attribute ta_inlinks numeric
+@attribute techniques_inlinks numeric
+@attribute visualization_inlinks numeric
+@attribute winter_inlinks numeric
+@attribute advisor_inlinks numeric
+@attribute alan_inlinks numeric
+@attribute ashish_inlinks numeric
+@attribute ben_inlinks numeric
+@attribute bruce_inlinks numeric
+@attribute craig_inlinks numeric
+@attribute daniel_inlinks numeric
+@attribute dean_inlinks numeric
+@attribute don_inlinks numeric
+@attribute ed_inlinks numeric
+@attribute environment_inlinks numeric
+@attribute george_inlinks numeric
+@attribute guo_inlinks numeric
+@attribute gupta_inlinks numeric
+@attribute hu_inlinks numeric
+@attribute image_inlinks numeric
+@attribute jr_inlinks numeric
+@attribute kumar_inlinks numeric
+@attribute lin_inlinks numeric
+@attribute lu_inlinks numeric
+@attribute marc_inlinks numeric
+@attribute memory_inlinks numeric
+@attribute net_inlinks numeric
+@attribute shore_inlinks numeric
+@attribute stephen_inlinks numeric
+@attribute sun_inlinks numeric
+@attribute technical_inlinks numeric
+@attribute tom_inlinks numeric
+@attribute van_inlinks numeric
+@attribute vladimir_inlinks numeric
+@attribute wei_inlinks numeric
+@attribute wilson_inlinks numeric
+@attribute wu_inlinks numeric
+@attribute yu_inlinks numeric
+@attribute zhou_inlinks numeric
+@attribute ai_inlinks numeric
+@attribute algebraic_inlinks numeric
+@attribute animation_inlinks numeric
+@attribute class {course,non-course}
+
+@data
+{0 1.438069,18 2.900758,20 2.993315}
+{0 2.279286,18 4.597592,20 4.744291,110 6.120592}
+{0 4.037171,7 6.620277,15 2.649211,45 9.492258}
+{0 1.438069,9 2.512862,23 3.160475}
+{0 4.777163,7 6.095833,44 3.381211,70 10.052062,110 10.84106}
+{4 2.070573,33 3.29957}
+{4 2.070573,9 2.512862,15 2.649211}
+{}
+{141 4.06107}
+{0 1.438069,4 3.281781,7 3.737643,15 4.1989,103 6.120592,109 6.120592}
+{0 3.717355,9 5.025723,23 7.338396,58 6.947535,74 8.313934}
+{0 2.876139,7 3.737643,9 2.512862,18 2.900758,20 4.744291}
+{0 3.717355,1 3.617964,2 3.754053,24 7.338396,43 3.381211,49 3.381211,138 4.06107}
+{0 3.339094,1 3.617964,2 3.754053,113 3.861664}
+{0 4.777163,7 6.095833,18 2.900758,27 7.491792,45 9.492258}
+{0 4.037171,9 2.512862,11 5.18283,58 3.473768}
+{0 4.037171,7 4.71638,73 9.25576}
+{0 4.777163,1 4.674516,2 4.850348,7 3.737643,73 5.675143}
+{0 2.279286}
+{0 1.438069,7 2.35819,38 3.29957}
+{0 2.279286,4 3.281781,7 3.737643,15 4.1989,46 3.381211,103 6.120592,109 6.120592}
+{0 2.279286,43 10.143632,49 10.143632,110 6.120592,138 9.429512}
+{0 4.777163,23 9.481426,74 10.74185,159 8.122139}
+{0 6.108814,1 6.497461,2 6.741863,5 8.920544}
+{0 2.279286,4 3.281781,9 3.982791,15 4.1989}
+{0 2.279286,5 2.139258,9 2.512862,72 3.580617,101 3.861664}
+{0 3.339094,1 2.469644,2 2.56254,4 3.281781,111 6.120592}
+{0 2.876139,11 2.591415,27 3.226539,57 3.473768,139 4.06107}
+{0 4.974902,7 4.71638,44 6.762421,70 10.052062}
+{0 3.717355,4 4.807722,7 5.475548,33 3.29957,86 9.582436,105 3.861664,134 4.06107}
+{0 4.314208,12 2.591415,59 6.947535,114 7.723327}
+{0 3.339094,1 2.469644,2 2.56254,24 5.009235,57 5.505791}
+{0 1.438069,5 2.139258,9 2.512862,140 4.06107}
+{0 1.438069,11 2.591415,46 3.381211}
+{}
+{0 1.438069,7 3.737643,9 2.512862,20 2.993315}
+{0 2.279286,9 2.512862,27 3.226539,46 3.381211,58 3.473768}
+{0 1.438069,69 3.580617}
+{97 3.861664,111 3.861664}
+{54 3.473768,69 3.580617}
+{1 1.558172,2 1.616783,4 2.070573,27 3.226539,33 3.29957,61 3.473768}
+{0 1.438069,7 4.71638,20 5.986629,26 6.320951,46 3.381211}
+{0 1.438069,1 1.558172,4 2.070573,9 2.512862,46 3.381211,109 3.861664}
+{2 1.616783,4 2.070573,16 2.649211}
+{0 1.438069,4 2.070573,15 2.649211,47 3.381211}
+{0 2.279286,4 5.812833,47 9.492258}
+{0 1.438069}
+{44 5.359092,70 5.675143}
+{0 1.438069,9 2.512862,104 6.120592}
+{9 2.512862,53 3.473768}
+{38 6.599139,58 6.947535,82 3.706992,100 6.120592}
+{0 1.438069,7 4.71638,15 2.649211,20 5.986629}
+{7 2.35819,44 5.359092,70 8.313934,82 5.875444}
+{136 4.06107}
+{15 2.649211,43 3.381211,49 3.381211}
+{0 1.438069,9 3.982791}
+{0 1.438069,59 5.505791,71 5.675143}
+{0 1.438069,4 3.281781,16 4.1989,29 3.226539,138 4.06107}
+{0 2.279286,69 3.580617,100 7.723327}
+{0 1.438069,43 7.850928,49 7.850928}
+{0 2.876139,9 6.495653}
+{0 1.438069,4 4.141146,15 4.1989,16 5.298421,19 2.945492}
+{7 2.35819,15 2.649211,20 2.993315}
+{0 1.438069,108 6.120592}
+{16 5.298421,82 3.706992}
+{}
+{45 3.381211,139 4.06107}
+{0 1.438069}
+{7 2.35819,20 2.993315,27 3.226539}
+{0 1.438069,7 6.095833,73 10.052062,84 3.706992}
+{73 3.580617,81 3.706992,82 3.706992,136 4.06107}
+{96 6.120592,113 3.861664,159 4.06107}
+{}
+{4 2.070573,9 2.512862}
+{0 1.438069,1 1.558172,2 1.616783,4 2.070573,5 2.139258,33 3.29957}
+{0 1.438069,85 5.875444,139 4.06107}
+{3 1.929105,4 2.070573,16 2.649211,17 2.900758,23 3.160475}
+{4 3.281781,16 4.1989,17 4.597592,23 5.009235,66 3.580617}
+{3 1.929105,4 2.070573,9 2.512862}
+{3 3.85821,17 2.900758,54 3.473768,153 4.06107}
+{3 1.929105}
+{4 2.070573,15 2.649211,16 2.649211,161 4.06107}
+{3 3.057559}
+{3 1.929105}
+{61 3.473768,83 3.706992,157 4.06107}
+{3 3.057559,61 3.473768}
+{1 1.558172,2 1.616783,3 1.929105,61 3.473768,151 4.06107}
+{3 3.85821,15 2.649211,53 3.473768,103 3.861664,153 4.06107}
+{3 1.929105}
+{3 3.85821,83 5.875444,96 3.861664,157 6.436643}
+{66 3.580617}
+{161 4.06107}
+{3 1.929105}
+{3 1.929105}
+{3 3.057559}
+{3 1.929105}
+{3 1.929105}
+{3 1.929105}
+{3 1.929105}
+{3 3.057559,7 2.35819,15 2.649211,136 4.06107}
+{3 4.479243}
+{3 3.057559,4 2.070573,47 3.381211}
+{3 1.929105}
+{4 2.070573,15 2.649211,81 3.706992,108 3.861664}
+{3 3.057559,27 3.226539,53 3.473768}
+{}
+{3 3.057559}
+{3 1.929105}
+{3 1.929105}
+{3 1.929105,4 2.070573,199 4.342117}
+{0 1.438069,3 1.929105}
+{}
+{0 1.438069,3 1.929105}
+{3 3.057559,9 2.512862,58 3.473768}
+{3 1.929105}
+{0 1.438069,3 1.929105}
+{3 1.929105}
+{0 1.438069,3 1.929105}
+{66 5.675143}
+{3 3.057559}
+{3 1.929105}
+{1 1.558172,2 1.616783,3 3.057559,4 2.070573,16 2.649211,17 2.900758,23 3.160475,25 3.160475,106 3.861664}
+{3 1.929105}
+{0 1.438069,3 1.929105}
+{0 2.279286,3 1.929105}
+{0 1.438069,3 4.479243,7 3.737643,53 5.505791,103 6.120592}
+{0 1.438069,3 3.85821,43 3.381211,49 3.381211,197 4.342117}
+{0 3.339094,3 1.929105}
+{3 1.929105}
+{3 1.929105}
+{4 2.070573,47 3.381211,155 4.06107}
+{1 1.558172,2 1.616783,3 1.929105,106 3.861664,135 4.06107}
+{3 1.929105}
+{3 1.929105}
+{3 1.929105,66 3.580617}
+{3 1.929105,66 3.580617,71 3.580617}
+{3 3.85821}
+{3 1.929105,53 3.473768}
+{1 1.558172,2 1.616783,3 3.057559,99 3.861664,100 3.861664,106 3.861664,155 4.06107}
+{3 1.929105}
+{3 1.929105,9 2.512862,38 3.29957}
+{3 3.057559}
+{1 1.558172,2 1.616783,66 3.580617,106 3.861664}
+{3 3.057559}
+{3 1.929105,158 4.06107}
+{3 1.929105,161 4.06107}
+{3 1.929105,101 3.861664}
+{3 1.929105}
+{1 2.469644,3 3.057559,26 5.009235}
+{3 1.929105}
+{7 2.35819,9 5.025723,59 8.065838,102 6.120592,109 8.966505}
+{4 4.807722,15 6.151277,33 7.661364,102 7.723327}
+{4 4.807722,27 7.491792,33 7.661364,102 6.120592}
+{4 4.807722,27 7.491792,33 7.661364,102 3.861664}
+{0 1.438069,7 2.35819,15 2.649211,20 2.993315,61 3.473768}
+{0 1.438069,142 4.06107,155 4.06107}
+{0 6.316457,1 1.558172,6 2.183992,7 4.71638,20 5.986629,27 6.453079,46 3.381211,107 3.861664}
+{0 1.438069,1 1.558172,2 1.616783}
+{0 1.438069,1 1.558172,2 1.616783,6 2.183992}
+{0 2.279286,6 2.183992,35 3.29957}
+{0 1.438069,18 2.900758,20 2.993315,27 3.226539,61 3.473768}
+{0 3.717355,1 3.116344,2 3.233566,4 2.070573,6 2.183992,9 2.512862,15 2.649211,98 3.861664,112 3.861664}
+{0 8.814334,1 1.558172,2 1.616783,5 2.139258,6 2.183992,101 7.723327}
+{0 1.438069,6 2.183992}
+{0 3.717355,1 1.558172,2 1.616783,6 2.183992,101 6.120592,152 6.436643,154 4.06107}
+{0 1.438069,6 2.183992,152 4.06107,154 4.06107}
+{0 7.43471,1 5.176136,2 5.370836,9 3.982791,11 2.591415,57 5.505791,198 6.882092}
+{}
+{0 7.056449,1 6.734308,2 6.987619,6 2.183992,9 5.025723,54 3.473768,57 6.947535,69 3.580617,98 3.861664,112 3.861664,141 8.122139,198 8.684233}
+{0 1.438069,6 2.183992,28 3.226539}
+{0 2.876139,1 1.558172,2 1.616783,6 2.183992,144 4.06107}
+{0 1.438069,6 2.183992,143 4.06107}
+{0 2.279286,1 1.558172,2 1.616783,6 3.461546,24 3.160475,107 3.861664,143 4.06107}
+{0 1.438069,6 2.183992,21 3.044682,156 4.06107}
+{0 2.279286,6 2.183992,15 2.649211,83 3.706992,115 3.861664,157 4.06107}
+{0 1.438069,6 2.183992,21 3.044682}
+{0 1.438069,6 2.183992,21 3.044682,156 4.06107}
+{0 2.279286,6 2.183992,34 3.29957}
+{0 1.438069,6 2.183992}
+{0 5.996641,6 2.183992,87 3.706992}
+{0 1.438069,6 2.183992,147 4.06107}
+{0 5.155425,6 2.183992,7 2.35819,15 2.649211,20 2.993315,148 4.06107}
+{0 1.438069,6 2.183992,13 2.619711}
+{0 5.878055,6 2.183992,7 4.71638,11 2.591415,45 6.762421,46 12.511966,72 3.580617}
+{0 4.974902,6 2.183992,51 3.381211}
+{0 2.876139,6 2.183992,15 2.649211,36 3.29957,96 3.861664}
+{0 5.752277,1 1.558172,2 1.616783,4 2.070573,6 2.183992,15 2.649211,108 3.861664,146 4.06107,150 4.06107}
+{0 1.438069,6 2.183992,39 3.29957}
+{}
+{0 1.438069,6 2.183992,22 3.100164}
+{0 3.717355,1 1.558172,4 4.141146,6 2.183992,7 2.35819,18 5.801515,86 7.413985,149 9.429512}
+{0 3.339094,1 1.558172,2 1.616783,3 4.479243,5 4.967202,6 2.183992,11 6.017079,54 6.947535,159 4.06107}
+{0 3.339094,1 1.558172,2 1.616783,6 2.183992,67 3.580617,137 4.06107}
+{97 3.861664}
+{}
+{72 14.635638}
+{0 3.339094,4 4.141146,114 7.723327}
+{0 2.279286,1 1.558172,2 1.616783,6 3.461546,35 5.229694}
+{0 2.279286,9 3.982791}
+{0 2.279286,85 7.413985}
+{0 2.876139,7 4.71638,135 8.122139}
+{0 3.717355,6 2.183992,68 3.580617,99 3.861664,100 6.120592}
+{0 3.339094,6 5.645538,48 7.850928}
+{0 2.279286,6 2.183992,145 4.06107,158 4.06107}
+{0 1.438069}
+{72 14.635638}
+{0 1.438069,56 3.473768,80 3.706992}
+{43 3.381211,49 3.381211,98 3.861664,112 3.861664}
+{46 5.359092,151 6.436643}
+{0 1.438069,6 2.183992}
+{0 1.438069,6 2.183992}
+{0 3.717355,6 5.071073,35 7.661364}
+{0 1.438069,6 9.739364,60 3.473768}
+{0 5.155425,6 7.555372,60 3.473768}
+{0 4.974902,6 7.555372,11 8.214591,24 10.01847,37 3.29957,80 11.750888}
+{0 3.339094,6 5.071073,42 7.850928,69 3.580617,158 4.06107}
+{0 1.438069}
+{72 8.313934}
+{0 2.279286,15 2.649211,30 3.226539,43 3.381211,49 3.381211,52 3.381211,54 5.505791}
+{0 2.876139,59 6.947535,71 7.161233}
+{0 2.279286,1 1.558172,2 1.616783,61 3.473768}
+{0 1.438069}
+{50 7.850928,72 8.313934}
+{0 1.438069}
+{0 2.279286,6 2.183992,88 3.706992}
+{0 3.339094,6 8.081732,79 8.60737}
+{0 1.438069,8 3.769489,33 3.29957,55 5.505791,69 3.580617,151 6.436643}
+{0 5.47524,4 5.812833,47 9.492258,160 6.436643}
+{0 4.974902,4 5.812833,16 2.649211,47 8.740303,56 3.473768,110 8.966505}
+{0 2.876139,4 2.070573,47 3.381211}
+{200 non-course}
+{1 1.558172,2 1.616783,5 2.139258,50 3.381211,200 non-course}
+{0 4.037171,1 3.116344,2 1.616783,4 4.807722,12 6.017079,16 6.151277,17 4.597592,24 3.160475,32 5.113944,89 8.60737,133 3.861664,140 6.436643,188 15.866155,200 non-course}
+{19 5.890985,53 6.947535,200 non-course}
+{55 10.421303,200 non-course}
+{25 3.160475,26 3.160475,200 non-course}
+{10 4.064207,25 3.160475,30 3.226539,52 3.381211,56 3.473768,64 8.065838,200 non-course}
+{191 6.436643,200 non-course}
+{200 non-course}
+{10 2.564229,12 7.275022,18 4.597592,81 3.706992,200 non-course}
+{0 6.316457,1 8.557252,2 8.879134,4 12.604536,5 2.139258,16 16.126972,17 17.469429,30 9.058041,89 16.996421,119 10.84106,200 non-course}
+{121 3.861664,200 non-course}
+{8 2.378283,32 3.226539,40 3.29957,200 non-course}
+{123 6.120592,200 non-course}
+{76 5.675143,200 non-course}
+{32 3.226539,40 3.29957,200 non-course}
+{32 3.226539,40 3.29957,200 non-course}
+{32 3.226539,40 3.29957,200 non-course}
+{32 3.226539,40 3.29957,200 non-course}
+{8 2.378283,32 3.226539,40 3.29957,200 non-course}
+{32 3.226539,40 3.29957,200 non-course}
+{32 3.226539,40 3.29957,200 non-course}
+{32 3.226539,40 3.29957,200 non-course}
+{8 4.756566,11 2.591415,12 2.591415,14 4.152143,34 11.414636,162 4.06107,200 non-course}
+{39 5.229694,200 non-course}
+{1 3.617964,2 3.754053,5 4.967202,116 3.861664,200 non-course}
+{200 non-course}
+{200 non-course}
+{200 non-course}
+{176 4.06107,200 non-course}
+{200 non-course}
+{200 non-course}
+{200 non-course}
+{164 6.436643,200 non-course}
+{190 4.06107,200 non-course}
+{1 1.558172,2 1.616783,5 2.139258,175 8.122139,200 non-course}
+{90 3.706992,200 non-course}
+{5 2.139258,11 2.591415,200 non-course}
+{165 4.06107,200 non-course}
+{200 non-course}
+{8 2.378283,14 4.152143,166 6.436643,200 non-course}
+{14 4.152143,200 non-course}
+{31 9.058041,200 non-course}
+{200 non-course}
+{200 non-course}
+{14 2.619711,128 7.723327,189 4.06107,200 non-course}
+{200 non-course}
+{187 10.497713,200 non-course}
+{13 2.619711,35 3.29957,200 non-course}
+{63 3.473768,200 non-course}
+{1 1.558172,14 2.619711,200 non-course}
+{169 6.436643,200 non-course}
+{200 non-course}
+{200 non-course}
+{8 2.378283,14 4.152143,168 4.06107,200 non-course}
+{200 non-course}
+{200 non-course}
+{14 2.619711,200 non-course}
+{200 non-course}
+{200 non-course}
+{200 non-course}
+{200 non-course}
+{200 non-course}
+{1 2.469644,2 2.56254,200 non-course}
+{200 non-course}
+{63 3.473768,200 non-course}
+{13 4.152143,14 4.152143,200 non-course}
+{200 non-course}
+{48 5.359092,200 non-course}
+{14 2.619711,200 non-course}
+{200 non-course}
+{92 5.875444,200 non-course}
+{200 non-course}
+{75 5.675143,200 non-course}
+{176 6.436643,200 non-course}
+{62 3.473768,200 non-course}
+{200 non-course}
+{200 non-course}
+{200 non-course}
+{31 3.226539,200 non-course}
+{200 non-course}
+{200 non-course}
+{65 5.505791,200 non-course}
+{14 2.619711,48 6.762421,200 non-course}
+{200 non-course}
+{5 4.278515,143 4.06107,200 non-course}
+{41 3.29957,200 non-course}
+{107 10.84106,200 non-course}
+{50 7.850928,51 9.492258,200 non-course}
+{1 2.469644,2 2.56254,5 3.390643,200 non-course}
+{200 non-course}
+{200 non-course}
+{126 6.120592,200 non-course}
+{200 non-course}
+{200 non-course}
+{200 non-course}
+{200 non-course}
+{200 non-course}
+{13 9.06271,200 non-course}
+{200 non-course}
+{200 non-course}
+{174 6.436643,200 non-course}
+{65 3.473768,200 non-course}
+{14 2.619711,200 non-course}
+{11 6.017079,200 non-course}
+{11 2.591415,14 4.152143,200 non-course}
+{200 non-course}
+{200 non-course}
+{67 3.580617,200 non-course}
+{196 6.436643,200 non-course}
+{41 6.599139,180 4.06107,200 non-course}
+{180 4.06107,200 non-course}
+{123 6.120592,200 non-course}
+{1 1.558172,2 1.616783,14 4.152143,125 7.723327,200 non-course}
+{194 4.06107,200 non-course}
+{194 8.122139,200 non-course}
+{200 non-course}
+{200 non-course}
+{14 4.152143,200 non-course}
+{75 3.580617,200 non-course}
+{200 non-course}
+{200 non-course}
+{37 3.29957,200 non-course}
+{200 non-course}
+{1 1.558172,2 1.616783,5 2.139258,125 3.861664,200 non-course}
+{200 non-course}
+{7 2.35819,172 4.06107,200 non-course}
+{200 non-course}
+{200 non-course}
+{13 4.152143,200 non-course}
+{88 3.706992,200 non-course}
+{13 2.619711,200 non-course}
+{200 non-course}
+{14 2.619711,200 non-course}
+{200 non-course}
+{200 non-course}
+{18 2.900758,188 4.06107,200 non-course}
+{179 6.436643,200 non-course}
+{8 3.769489,14 4.152143,29 3.226539,200 non-course}
+{200 non-course}
+{14 2.619711,200 non-course}
+{1 1.558172,2 1.616783,5 2.139258,200 non-course}
+{200 non-course}
+{84 3.706992,190 15.461934,200 non-course}
+{200 non-course}
+{14 2.619711,200 non-course}
+{14 4.152143,29 3.226539,200 non-course}
+{200 non-course}
+{200 non-course}
+{200 non-course}
+{36 6.599139,200 non-course}
+{200 non-course}
+{14 2.619711,200 non-course}
+{123 3.861664,200 non-course}
+{63 3.473768,200 non-course}
+{164 4.06107,200 non-course}
+{77 9.25576,200 non-course}
+{31 6.453079,200 non-course}
+{77 3.580617,200 non-course}
+{200 non-course}
+{200 non-course}
+{200 non-course}
+{1 3.116344,2 3.233566,200 non-course}
+{200 non-course}
+{90 7.413985,200 non-course}
+{200 non-course}
+{75 7.161233,94 7.413985,200 non-course}
+{200 non-course}
+{14 4.152143,128 7.723327,189 4.06107,200 non-course}
+{200 non-course}
+{14 2.619711,200 non-course}
+{8 2.378283,14 2.619711,29 5.113944,200 non-course}
+{200 non-course}
+{200 non-course}
+{1 1.558172,2 1.616783,5 2.139258,14 4.152143,78 8.313934,186 4.06107,200 non-course}
+{200 non-course}
+{123 6.120592,200 non-course}
+{1 2.469644,2 2.56254,36 3.29957,200 non-course}
+{200 non-course}
+{191 6.436643,200 non-course}
+{200 non-course}
+{62 3.473768,192 4.06107,200 non-course}
+{1 1.558172,2 1.616783,200 non-course}
+{200 non-course}
+{65 11.011583,132 11.584991,200 non-course}
+{174 4.06107,200 non-course}
+{91 7.413985,200 non-course}
+{111 6.120592,200 non-course}
+{91 11.120977,200 non-course}
+{75 5.675143,200 non-course}
+{2 2.56254,5 3.390643,187 4.06107,200 non-course}
+{200 non-course}
+{200 non-course}
+{81 3.706992,105 3.861664,200 non-course}
+{1 4.674516,2 4.850348,4 2.070573,16 2.649211,24 3.160475,56 10.421303,64 14.48535,89 15.45788,114 16.961653,200 non-course}
+{44 3.381211,70 3.580617,172 4.06107,200 non-course}
+{54 5.505791,200 non-course}
+{85 3.706992,105 3.861664,200 non-course}
+{1 1.558172,2 1.616783,11 2.591415,12 2.591415,18 2.900758,26 3.160475,200 non-course}
+{1 1.558172,2 1.616783,4 3.281781,12 6.017079,16 4.1989,89 5.875444,149 6.436643,200 non-course}
+{1 1.558172,4 2.070573,16 2.649211,141 4.06107,200 non-course}
+{38 3.29957,200 non-course}
+{1 1.558172,2 1.616783,12 7.275022,33 7.661364,81 3.706992,85 5.875444,89 9.582436,150 4.06107,200 non-course}
+{7 2.35819,12 7.275022,73 5.675143,200 non-course}
+{0 4.974902,1 4.939289,2 5.796106,4 13.815744,5 2.139258,11 2.591415,16 12.735696,17 18.178429,30 11.567022,93 23.161019,98 3.861664,119 10.84106,129 12.241184,130 12.828169,200 non-course}
+{116 3.861664,200 non-course}
+{200 non-course}
+{1 3.116344,2 3.233566,43 10.143632,49 10.143632,56 12.453326,64 6.947535,129 3.861664,197 13.02635,200 non-course}
+{28 11.567022,200 non-course}
+{11 4.107296,200 non-course}
+{200 non-course}
+{200 non-course}
+{200 non-course}
+{200 non-course}
+{144 6.436643,200 non-course}
+{200 non-course}
+{22 4.913643,200 non-course}
+{1 1.558172,5 2.139258,26 3.160475,39 6.599139,200 non-course}
+{21 4.825707,29 3.226539,200 non-course}
+{10 4.064207,19 4.668495,200 non-course}
+{22 3.100164,132 3.861664,200 non-course}
+{200 non-course}
+{62 3.473768,200 non-course}
+{62 5.505791,200 non-course}
+{200 non-course}
+{41 3.29957,200 non-course}
+{75 3.580617,200 non-course}
+{9 2.512862,10 2.564229,38 3.29957,200 non-course}
+{200 non-course}
+{1 1.558172,2 1.616783,200 non-course}
+{63 3.473768,168 4.06107,200 non-course}
+{65 3.473768,200 non-course}
+{79 3.706992,200 non-course}
+{1 4.374342,2 4.538883,5 2.139258,9 9.567356,10 7.692688,18 8.143456,38 12.562633,200 non-course}
+{186 4.06107,200 non-course}
+{200 non-course}
+{7 4.71638,10 5.128459,18 2.900758,19 2.945492,200 non-course}
+{200 non-course}
+{200 non-course}
+{22 3.100164,37 10.459388,200 non-course}
+{200 non-course}
+{200 non-course}
+{1 1.558172,2 1.616783,120 10.84106,200 non-course}
+{120 3.861664,200 non-course}
+{200 non-course}
+{200 non-course}
+{8 2.378283,13 5.239421,104 3.861664,113 3.861664,133 3.861664,200 non-course}
+{10 4.064207,44 8.740303,56 5.505791,64 5.505791,70 8.313934,73 11.350286,200 non-course}
+{8 2.378283,170 15.866155,200 non-course}
+{200 non-course}
+{200 non-course}
+{200 non-course}
+{8 2.378283,10 2.564229,200 non-course}
+{200 non-course}
+{194 4.06107,200 non-course}
+{200 non-course}
+{200 non-course}
+{200 non-course}
+{1 1.558172,2 1.616783,5 2.139258,31 5.113944,67 5.675143,186 6.436643,200 non-course}
+{200 non-course}
+{200 non-course}
+{8 2.378283,170 4.06107,200 non-course}
+{173 8.122139,200 non-course}
+{200 non-course}
+{200 non-course}
+{200 non-course}
+{200 non-course}
+{28 5.113944,42 3.381211,200 non-course}
+{200 non-course}
+{200 non-course}
+{95 3.706992,200 non-course}
+{196 11.400864,200 non-course}
+{187 4.06107,200 non-course}
+{37 3.29957,200 non-course}
+{200 non-course}
+{91 5.875444,200 non-course}
+{68 3.580617,200 non-course}
+{95 3.706992,200 non-course}
+{200 non-course}
+{28 3.226539,200 non-course}
+{28 3.226539,200 non-course}
+{21 7.069533,55 5.505791,200 non-course}
+{200 non-course}
+{28 5.113944,132 3.861664,200 non-course}
+{50 7.850928,128 7.723327,200 non-course}
+{200 non-course}
+{200 non-course}
+{200 non-course}
+{13 2.619711,200 non-course}
+{22 3.100164,200 non-course}
+{104 7.723327,200 non-course}
+{165 11.400864,200 non-course}
+{8 3.769489,200 non-course}
+{19 5.890985,56 5.505791,64 3.473768,150 8.122139,200 non-course}
+{39 3.29957,200 non-course}
+{48 6.762421,84 3.706992,200 non-course}
+{21 3.044682,65 3.473768,200 non-course}
+{7 3.737643,64 5.505791,74 5.675143,200 non-course}
+{8 2.378283,180 15.866155,200 non-course}
+{91 7.413985,200 non-course}
+{200 non-course}
+{181 6.436643,200 non-course}
+{200 non-course}
+{200 non-course}
+{76 3.580617,200 non-course}
+{200 non-course}
+{4 5.812833,11 2.591415,17 8.143456,92 7.413985,93 10.406843,200 non-course}
+{1 3.617964,2 3.754053,24 7.338396,80 8.60737,92 9.582436,200 non-course}
+{200 non-course}
+{200 non-course}
+{200 non-course}
+{148 8.122139,200 non-course}
+{10 2.564229,19 2.945492,200 non-course}
+{8 2.378283,63 8.979559,168 19.309929,200 non-course}
+{8 6.676684,200 non-course}
+{1 2.469644,2 1.616783,10 7.692688,19 8.836477,59 12.017261,71 12.386898,130 8.966505,200 non-course}
+{8 2.378283,29 3.226539,200 non-course}
+{13 2.619711,35 3.29957,200 non-course}
+{147 4.06107,200 non-course}
+{1 1.558172,5 2.139258,124 8.966505,200 non-course}
+{200 non-course}
+{5 2.139258,179 6.436643,200 non-course}
+{200 non-course}
+{1 2.469644,2 2.56254,5 3.390643,10 5.128459,57 6.947535,130 3.861664,200 non-course}
+{1 6.368971,2 6.60854,5 7.916194,10 7.198702,19 8.836477,85 3.706992,108 17.468475,130 16.961653,200 non-course}
+{178 8.122139,200 non-course}
+{200 non-course}
+{200 non-course}
+{10 7.198702,19 6.839221,31 3.226539,193 4.06107,200 non-course}
+{39 3.29957,200 non-course}
+{170 4.06107,200 non-course}
+{200 non-course}
+{31 6.453079,200 non-course}
+{200 non-course}
+{1 1.558172,2 1.616783,200 non-course}
+{144 4.06107,200 non-course}
+{4 2.070573,16 2.649211,17 2.900758,48 5.359092,82 8.60737,200 non-course}
+{166 11.400864,200 non-course}
+{1 1.558172,2 1.616783,10 7.198702,19 5.890985,111 3.861664,200 non-course}
+{75 3.580617,200 non-course}
+{1 2.469644,2 4.538883,10 7.692688,19 6.839221,26 3.160475,30 3.226539,200 non-course}
+{200 non-course}
+{39 17.439553,200 non-course}
+{41 5.229694,200 non-course}
+{8 3.769489,84 3.706992,200 non-course}
+{200 non-course}
+{200 non-course}
+{5 2.139258,11 2.591415,200 non-course}
+{200 non-course}
+{176 4.06107,200 non-course}
+{8 2.378283,39 10.960933,137 13.490581,190 13.490581,200 non-course}
+{11 2.591415,200 non-course}
+{1 3.116344,2 3.233566,200 non-course}
+{200 non-course}
+{7 5.475548,10 5.128459,19 5.890985,74 9.25576,200 non-course}
+{1 1.558172,2 1.616783,5 2.139258,11 2.591415,77 7.161233,200 non-course}
+{200 non-course}
+{200 non-course}
+{1 1.558172,2 1.616783,5 2.139258,179 10.497713,200 non-course}
+{115 7.723327,200 non-course}
+{171 4.06107,200 non-course}
+{200 non-course}
+{200 non-course}
+{200 non-course}
+{200 non-course}
+{200 non-course}
+{4 5.352354,17 7.49835,93 9.582436,200 non-course}
+{195 6.436643,200 non-course}
+{41 3.29957,200 non-course}
+{200 non-course}
+{200 non-course}
+{1 1.558172,2 1.616783,133 3.861664,200 non-course}
+{2 4.538883,5 6.005655,41 3.29957,200 non-course}
+{200 non-course}
+{200 non-course}
+{4 2.070573,16 2.649211,200 non-course}
+{28 3.226539,200 non-course}
+{200 non-course}
+{51 3.381211,200 non-course}
+{163 4.06107,200 non-course}
+{200 non-course}
+{79 3.706992,200 non-course}
+{200 non-course}
+{178 4.06107,200 non-course}
+{60 3.473768,200 non-course}
+{200 non-course}
+{178 4.06107,200 non-course}
+{200 non-course}
+{39 3.29957,200 non-course}
+{1 1.558172,2 1.616783,200 non-course}
+{4 2.070573,8 3.769489,84 5.875444,93 3.706992,200 non-course}
+{175 4.06107,200 non-course}
+{200 non-course}
+{10 4.064207,96 8.966505,113 8.966505,129 6.120592,135 9.429512,200 non-course}
+{1 1.558172,5 2.139258,26 3.160475,191 12.873286,200 non-course}
+{200 non-course}
+{200 non-course}
+{68 3.580617,200 non-course}
+{200 non-course}
+{145 4.06107,200 non-course}
+{62 3.473768,200 non-course}
+{8 2.378283,31 9.058041,193 11.400864,200 non-course}
+{200 non-course}
+{65 6.947535,200 non-course}
+{200 non-course}
+{174 6.436643,200 non-course}
+{200 non-course}
+{200 non-course}
+{13 4.152143,200 non-course}
+{91 3.706992,200 non-course}
+{200 non-course}
+{181 4.06107,200 non-course}
+{13 2.619711,200 non-course}
+{200 non-course}
+{200 non-course}
+{195 8.122139,200 non-course}
+{62 5.505791,200 non-course}
+{196 4.06107,200 non-course}
+{200 non-course}
+{0 5.618379,1 4.939289,2 4.538883,3 8.194698,4 15.104045,5 3.390643,11 4.107296,15 4.1989,16 19.300566,17 20.650323,23 22.531923,25 13.659347,26 5.009235,30 11.567022,44 5.359092,57 5.505791,58 8.065838,104 6.120592,119 12.828169,131 13.843919,133 6.120592,140 9.429512,142 12.873286,184 6.436643,188 6.436643,200 non-course}
+{42 3.381211,118 3.861664,200 non-course}
+{116 9.982256,200 non-course}
+{21 3.044682,200 non-course}
+{19 2.945492,30 3.226539,45 3.381211,114 3.861664,131 3.861664,172 4.06107,200 non-course}
+{200 non-course}
+{200 non-course}
+{76 11.350286,117 12.828169,200 non-course}
+{200 non-course}
+{200 non-course}
+{34 3.29957,200 non-course}
+{31 9.058041,200 non-course}
+{13 9.06271,200 non-course}
+{8 4.756566,34 24.069109,200 non-course}
+{200 non-course}
+{163 8.122139,200 non-course}
+{200 non-course}
+{200 non-course}
+{200 non-course}
+{116 7.723327,200 non-course}
+{5 2.139258,42 3.381211,200 non-course}
+{200 non-course}
+{117 6.120592,200 non-course}
+{167 4.06107,200 non-course}
+{1 1.558172,2 1.616783,200 non-course}
+{200 non-course}
+{200 non-course}
+{200 non-course}
+{13 5.239421,200 non-course}
+{200 non-course}
+{34 5.229694,200 non-course}
+{63 3.473768,200 non-course}
+{60 5.505791,200 non-course}
+{65 6.947535,200 non-course}
+{200 non-course}
+{200 non-course}
+{200 non-course}
+{200 non-course}
+{171 6.436643,200 non-course}
+{8 2.378283,87 21.806913,200 non-course}
+{200 non-course}
+{1 1.558172,2 2.56254,5 3.390643,36 6.599139,117 8.966505,200 non-course}
+{8 2.378283,11 2.591415,29 5.113944,200 non-course}
+{37 7.661364,200 non-course}
+{4 2.070573,16 2.649211,17 2.900758,23 3.160475,79 5.875444,200 non-course}
+{21 7.870389,55 8.979559,120 8.966505,200 non-course}
+{200 non-course}
+{1 4.374342,2 4.538883,173 10.497713,200 non-course}
+{182 4.06107,200 non-course}
+{1 5.765922,2 5.982807,5 7.916194,8 6.147772,200 non-course}
+{68 3.580617,200 non-course}
+{200 non-course}
+{48 3.381211,200 non-course}
+{48 10.143632,200 non-course}
+{34 3.29957,200 non-course}
+{13 2.619711,35 8.529264,200 non-course}
+{77 7.161233,200 non-course}
+{2 4.850348,200 non-course}
+{200 non-course}
+{200 non-course}
+{200 non-course}
+{200 non-course}
+{200 non-course}
+{50 6.762421,51 5.359092,169 11.400864,200 non-course}
+{200 non-course}
+{200 non-course}
+{200 non-course}
+{200 non-course}
+{200 non-course}
+{200 non-course}
+{90 3.706992,200 non-course}
+{200 non-course}
+{200 non-course}
+{200 non-course}
+{200 non-course}
+{200 non-course}
+{200 non-course}
+{200 non-course}
+{121 3.861664,200 non-course}
+{76 8.313934,200 non-course}
+{4 2.070573,16 2.649211,17 2.900758,23 3.160475,122 8.966505,200 non-course}
+{200 non-course}
+{8 2.378283,200 non-course}
+{12 2.591415,200 non-course}
+{200 non-course}
+{200 non-course}
+{37 12.209859,200 non-course}
+{5 2.139258,11 2.591415,182 4.06107,200 non-course}
+{200 non-course}
+{200 non-course}
+{1 2.469644,2 2.56254,200 non-course}
+{4 4.807722,16 6.151277,17 6.735351,23 7.338396,200 non-course}
+{200 non-course}
+{200 non-course}
+{1 1.558172,2 1.616783,22 3.100164,200 non-course}
+{5 2.139258,11 2.591415,200 non-course}
+{118 3.861664,200 non-course}
+{200 non-course}
+{200 non-course}
+{26 5.009235,125 6.120592,200 non-course}
+{13 9.391564,200 non-course}
+{5 2.139258,200 non-course}
+{200 non-course}
+{200 non-course}
+{13 9.974168,200 non-course}
+{200 non-course}
+{31 7.491792,200 non-course}
+{200 non-course}
+{117 8.966505,200 non-course}
+{200 non-course}
+{200 non-course}
+{39 3.29957,200 non-course}
+{200 non-course}
+{7 3.737643,20 2.993315,86 3.706992,134 4.06107,183 8.122139,200 non-course}
+{1 1.558172,2 1.616783,12 2.591415,86 3.706992,200 non-course}
+{200 non-course}
+{122 6.120592,200 non-course}
+{13 7.354458,200 non-course}
+{37 5.229694,200 non-course}
+{200 non-course}
+{200 non-course}
+{1 4.027816,2 4.179323,76 5.675143,200 non-course}
+{200 non-course}
+{90 7.413985,200 non-course}
+{126 6.120592,200 non-course}
+{200 non-course}
+{200 non-course}
+{200 non-course}
+{200 non-course}
+{200 non-course}
+{200 non-course}
+{200 non-course}
+{200 non-course}
+{200 non-course}
+{200 non-course}
+{4 2.070573,16 2.649211,17 2.900758,23 3.160475,60 3.473768,200 non-course}
+{200 non-course}
+{167 6.436643,200 non-course}
+{169 16.934356,200 non-course}
+{22 3.100164,200 non-course}
+{200 non-course}
+{2 1.616783,26 3.160475,200 non-course}
+{200 non-course}
+{200 non-course}
+{200 non-course}
+{132 11.584991,200 non-course}
+{200 non-course}
+{200 non-course}
+{193 8.122139,200 non-course}
+{200 non-course}
+{200 non-course}
+{200 non-course}
+{200 non-course}
+{200 non-course}
+{8 2.378283,167 17.551651,200 non-course}
+{67 11.894551,200 non-course}
+{1 2.469644,2 2.56254,5 3.390643,78 8.313934,200 non-course}
+{200 non-course}
+{200 non-course}
+{171 6.436643,200 non-course}
+{163 4.06107,200 non-course}
+{122 7.723327,146 4.06107,200 non-course}
+{200 non-course}
+{78 5.675143,94 7.413985,200 non-course}
+{200 non-course}
+{8 3.769489,28 9.058041,200 non-course}
+{177 10.497713,200 non-course}
+{25 3.160475,30 3.226539,44 7.850928,131 3.861664,200 non-course}
+{1 2.469644,2 2.56254,12 6.017079,25 5.009235,200 non-course}
+{4 2.070573,47 3.381211,200 non-course}
+{10 4.064207,12 6.017079,200 non-course}
+{12 6.698711,131 3.861664,200 non-course}
+{200 non-course}
+{7 2.35819,64 3.473768,200 non-course}
+{1 1.558172,10 2.564229,12 4.107296,19 4.668495,25 5.009235,74 8.313934,200 non-course}
+{12 2.591415,74 7.161233,142 6.436643,200 non-course}
+{7 3.737643,12 6.017079,20 4.744291,200 non-course}
+{1 1.558172,2 1.616783,10 5.953956,12 2.591415,25 7.338396,99 3.861664,200 non-course}
+{1 6.948562,2 7.101423,25 3.160475,200 non-course}
+{9 5.025723,10 2.564229,12 5.18283,38 5.229694,57 8.979559,58 3.473768,99 6.120592,200 non-course}
+{200 non-course}
+{0 5.878055,1 6.232688,2 6.467131,4 11.093203,5 2.139258,16 10.596843,17 14.878807,25 7.338396,30 12.906157,52 10.143632,93 17.424494,119 9.982256,200 non-course}
+{200 non-course}
+{149 4.06107,200 non-course}
+{83 3.706992,160 4.06107,200 non-course}
+{11 2.591415,12 4.107296,200 non-course}
+{200 non-course}
+{18 2.900758,45 3.381211,200 non-course}
+{24 3.160475,184 8.122139,200 non-course}
+{12 4.107296,18 2.900758,45 3.381211,185 6.436643,200 non-course}
+{1 2.469644,2 2.56254,12 5.18283,18 2.900758,38 3.29957,45 5.359092,54 3.473768,83 3.706992,185 4.06107,200 non-course}
+{1 3.617964,5 3.390643,26 5.009235,124 6.120592,184 15.027744,200 non-course}
+{1 1.558172,2 1.616783,12 7.774245,18 2.900758,105 3.861664,185 16.599471,200 non-course}
+{1 1.558172,2 1.616783,175 8.122139,200 non-course}
+{127 3.861664,200 non-course}
+{200 non-course}
+{200 non-course}
+{200 non-course}
+{200 non-course}
+{42 3.381211,118 3.861664,200 non-course}
+{200 non-course}
+{164 4.06107,200 non-course}
+{200 non-course}
+{200 non-course}
+{36 3.29957,200 non-course}
+{107 8.966505,200 non-course}
+{165 6.436643,200 non-course}
+{1 4.939289,2 5.12508,200 non-course}
+{121 7.723327,200 non-course}
+{88 5.875444,200 non-course}
+{1 4.027816,2 4.538883,5 2.139258,24 6.320951,200 non-course}
+{200 non-course}
+{200 non-course}
+{77 9.25576,200 non-course}
+{13 2.619711,35 3.29957,200 non-course}
+{200 non-course}
+{22 7.198357,37 6.599139,200 non-course}
+{200 non-course}
+{200 non-course}
+{200 non-course}
+{200 non-course}
+{200 non-course}
+{200 non-course}
+{200 non-course}
+{13 7.354458,200 non-course}
+{53 3.473768,120 3.861664,183 4.06107,200 non-course}
+{67 5.675143,137 6.436643,200 non-course}
+{18 2.900758,160 4.06107,200 non-course}
+{13 7.354458,35 5.229694,200 non-course}
+{8 2.378283,68 3.580617,200 non-course}
+{13 2.619711,35 7.661364,200 non-course}
+{36 3.29957,200 non-course}
+{200 non-course}
+{36 3.29957,200 non-course}
+{36 6.599139,63 3.473768,127 7.723327,183 4.06107,200 non-course}
+{200 non-course}
+{22 6.200327,200 non-course}
+{1 3.116344,2 3.233566,13 4.152143,200 non-course}
+{68 5.675143,200 non-course}
+{52 5.359092,112 3.861664,134 4.06107,200 non-course}
+{1 1.558172,2 1.616783,5 3.390643,11 2.591415,42 6.762421,200 non-course}
+{200 non-course}
+{42 3.381211,118 3.861664,200 non-course}
+{21 9.134047,55 19.077421,200 non-course}
+{48 7.850928,200 non-course}
+{200 non-course}
+{1 3.617964,2 3.754053,24 7.338396,62 8.065838,200 non-course}
+{200 non-course}
+{1 1.558172,2 1.616783,5 2.139258,200 non-course}
+{200 non-course}
+{145 6.436643,200 non-course}
+{87 7.413985,200 non-course}
+{200 non-course}
+{51 5.359092,200 non-course}
+{87 3.706992,200 non-course}
+{200 non-course}
+{200 non-course}
+{21 3.044682,200 non-course}
+{1 2.469644,2 2.56254,24 5.009235,200 non-course}
+{55 3.473768,200 non-course}
+{200 non-course}
+{200 non-course}
+{21 6.089365,200 non-course}
+{195 8.122139,200 non-course}
+{200 non-course}
+{173 4.06107,200 non-course}
+{200 non-course}
+{90 3.706992,200 non-course}
+{200 non-course}
+{50 3.381211,51 3.381211,200 non-course}
+{1 4.939289,2 5.12508,200 non-course}
+{200 non-course}
+{200 non-course}
+{200 non-course}
+{94 5.875444,200 non-course}
+{200 non-course}
+{200 non-course}
+{200 non-course}
+{200 non-course}
+{21 10.114216,55 8.065838,200 non-course}
+{125 9.982256,200 non-course}
+{78 3.580617,200 non-course}
+{146 4.06107,200 non-course}
+{1 1.558172,2 1.616783,200 non-course}
+{79 3.706992,200 non-course}
+{200 non-course}
+{200 non-course}
+{92 12.314362,200 non-course}
+{200 non-course}
+{22 3.100164,200 non-course}
+{92 9.582436,200 non-course}
+{126 8.966505,182 9.429512,200 non-course}
+{200 non-course}
+{13 6.08278,200 non-course}
+{60 3.473768,200 non-course}
+{200 non-course}
+{200 non-course}
+{34 6.599139,200 non-course}
+{200 non-course}
+{1 2.469644,2 2.56254,124 6.120592,153 10.497713,200 non-course}
+{60 5.505791,200 non-course}
+{1 3.116344,2 4.179323,10 5.128459,12 5.18283,52 8.740303,200 non-course}
+{22 3.100164,37 8.529264,200 non-course}
+{200 non-course}
+{200 non-course}
+{200 non-course}
+{50 9.492258,51 10.143632,200 non-course}
+{200 non-course}
+{200 non-course}
+{200 non-course}
+{8 4.756566,29 5.113944,200 non-course}
+{59 5.505791,71 5.675143,200 non-course}
+{9 3.982791,200 non-course}
+{1 2.469644,2 2.56254,10 2.564229,12 6.017079,38 6.599139,52 3.381211,80 3.706992,86 8.60737,200 non-course}
+{94 3.706992,200 non-course}
+{31 9.679618,200 non-course}
+{1 1.558172,5 2.139258,200 non-course}
+{200 non-course}
+{200 non-course}
+{200 non-course}
+{200 non-course}
+{42 5.359092,200 non-course}
+{200 non-course}
+{200 non-course}
+{200 non-course}
+{200 non-course}
+{148 4.06107,200 non-course}
+{41 3.29957,200 non-course}
+{200 non-course}
+{1 4.374342,2 4.538883,5 5.529901,200 non-course}
+{200 non-course}
+{200 non-course}
+{200 non-course}
+{200 non-course}
+{67 3.580617,76 5.675143,200 non-course}
+{8 2.378283,29 3.226539,128 6.120592,162 4.06107,189 4.06107,200 non-course}
+{200 non-course}
+{152 8.122139,154 8.122139,200 non-course}
+{200 non-course}
+{200 non-course}
+{1 1.558172,2 1.616783,5 2.139258,200 non-course}
+{87 3.706992,200 non-course}
+{200 non-course}
+{36 7.661364,200 non-course}
+{115 6.120592,127 3.861664,200 non-course}
+{200 non-course}
+{77 3.580617,200 non-course}
+{97 3.861664,177 4.06107,199 4.342117,200 non-course}
+{177 4.06107,200 non-course}
+{200 non-course}
+{97 6.120592,200 non-course}
+{78 10.052062,94 3.706992,200 non-course}
+{10 8.870776,19 6.839221,25 5.009235,30 3.226539,52 3.381211,59 12.017261,71 12.386898,200 non-course}
+{200 non-course}
+{22 7.198357,200 non-course}
+{21 3.044682,156 4.06107,200 non-course}
+{200 non-course}
+{200 non-course}
+{147 19.927225,200 non-course}
+{200 non-course}
+{200 non-course}
+{29 3.226539,122 3.861664,162 4.06107,200 non-course}
+{200 non-course}
+{200 non-course}
+{78 8.313934,200 non-course}
+{8 2.378283,28 5.113944,200 non-course}
+{127 3.861664,200 non-course}
+{11 4.107296,200 non-course}
+{1 1.558172,5 2.139258,13 2.619711,124 3.861664,200 non-course}
+{34 7.661364,200 non-course}
+{200 non-course}
+{1 4.374342,2 4.538883,50 16.25468,51 3.381211,200 non-course}
+{88 3.706992,200 non-course}
+{34 6.599139,200 non-course}
+{200 non-course}
+{88 10.406843,200 non-course}
+{41 5.229694,200 non-course}
+{200 non-course}
+{200 non-course}
+{200 non-course}
+{28 5.113944,200 non-course}
+{200 non-course}
+{95 3.706992,192 4.06107,200 non-course}
+{1 2.469644,2 2.56254,5 3.390643,200 non-course}
+{1 4.374342,2 4.850348,10 2.564229,12 7.275022,52 14.85135,80 3.706992,200 non-course}
+{181 4.06107,200 non-course}
+{8 2.378283,115 8.966505,200 non-course}
+{192 4.06107,200 non-course}
+{121 3.861664,200 non-course}
+{200 non-course}
+{95 5.875444,200 non-course}
+{200 non-course}
+{41 3.29957,200 non-course}
+{200 non-course}
+{95 5.875444,200 non-course}
+{200 non-course}
+{200 non-course}
+{200 non-course}
+{126 3.861664,200 non-course}
+{1 1.558172,10 5.128459,129 3.861664,200 non-course}
+{200 non-course}
+{8 2.378283,166 16.934356,200 non-course}
