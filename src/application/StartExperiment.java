@@ -33,48 +33,39 @@ public class StartExperiment {
 	 * Reads experiment properties and starts the experiment
 	 * @param pathToPropertiesFolder the path to the folder that contains experiment properties (cv.properties, data.properties, co-training.properties, GA.properties)
 	 * @param experimentSettingsFile experiment properties file name
+	 * @throws Exception if there is an error reading one of the properties files
 	 */
-	public static void setExperiment(String pathToPropertiesFolder, String experimentSettingsFile){
+	public static void setExperiment(String pathToPropertiesFolder, String experimentSettingsFile) throws Exception{
 		String filePath = pathToPropertiesFolder + "/";
 		
 		try{
 			DatasetSettings.getInstance().readProperties(filePath + "data.properties");
 		}catch(Exception e){
-			System.out.println("ERROR: Cannot read data properties");
-			e.printStackTrace();
-			System.exit(1);
+			throw new Exception("ERROR: Cannot read data properties", e);			
 		}
 		
 		try{
 			CVSettings.getInstance().readProperties(filePath + "cv.properties");
 		}catch(Exception e){
-			System.out.println("ERROR: Cannot read data properties");
-			e.printStackTrace();
-			System.exit(1);
+			throw new Exception("ERROR: Cannot read cv properties", e);			
 		}
 		
 		try{
 			CoTrainingSettings.getInstance().readProperties(filePath + "co-training.properties");
 		}catch(Exception e){
-			System.out.println("ERROR: Cannot read co-training properties");
-			e.printStackTrace();
-			System.exit(1);
+			throw new Exception("ERROR: Cannot read co-training properties", e);			
 		}
 		
 		try{
 			ExperimentSettings.getInstance().readProperties(filePath + experimentSettingsFile);
 		}catch(Exception e){
-			System.out.println("ERROR: Cannot read experiment properties");
-			e.printStackTrace();
-			System.exit(1);
+			throw new Exception("ERROR: Cannot read experiment properties", e);			
 		}
 		
 		try{
 			GASettings.getInstance().readProperties(filePath + "GA.properties");
 		}catch(Exception e){
-			System.out.println("ERROR: Cannot read GA properties");
-			e.printStackTrace();
-			System.exit(1);
+			throw new Exception("ERROR: Cannot read GA properties", e);			
 		}
 	}
 	
@@ -161,7 +152,7 @@ public class StartExperiment {
 		if (splitter == null && (noSplits > 1)) 
 			throw new Exception("Splitter not specified. Cannot run multiple splits experiment.");		
 		
-		DecimalFormat df = new DecimalFormat("###.##");
+		DecimalFormat df = new DecimalFormat("###.#");
 		System.out.println();
 		System.out.println("Starting cross-validation for " + algorithm.getName() + " experiment...");
 		System.out.println();
@@ -289,7 +280,7 @@ public class StartExperiment {
 		runCrossvalidation();
 	}
 
-	public static void main(String[] args) throws Exception {
+	public static void main(String[] args) {
 		if ((args.length != 0) && (args.length != 2)) {
 			System.out.println("Usage: ");			
 			System.out.println();
@@ -315,18 +306,18 @@ public class StartExperiment {
 //				setExperiment("./data/News2x2/experiment", "experiment_MV.properties");
 //				setExperiment("./data/News2x2/experiment", "experiment_Co-training_Natural.properties");
 				
-				setExperiment(args[0], args[1]);
-				StartExperiment experimentStarter = new StartExperiment();
-				experimentStarter.run();
+				try{
+					setExperiment(args[0], args[1]);
+					StartExperiment experimentStarter = new StartExperiment();
+					experimentStarter.run();
+				}catch(Exception e){
+					System.out.println(e.getMessage());					
+				}				
 			}else{
 				EventQueue.invokeLater(new Runnable() {
 					public void run() {
-						try {
-							RSSalgFrame frame = new RSSalgFrame();
-							frame.setVisible(true);
-						} catch (Exception e) {
-							e.printStackTrace();
-						}
+						RSSalgFrame frame = new RSSalgFrame();
+						frame.setVisible(true);
 					}
 				});
 			}

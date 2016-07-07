@@ -32,19 +32,13 @@ public class Confidences {
 	 */
 	public String getPrediction(){
 		String prediction = DatasetSettings.getInstance().getClassNames().get(0);
-		try{
-			double maxConf = getCombinedConfidence(prediction);
-			for(int i=1; i<DatasetSettings.getInstance().getClassNames().size(); i++){
-				double conf = getCombinedConfidence(DatasetSettings.getInstance().getClassNames().get(i));
-				if(conf > maxConf){
-					maxConf = conf;
-					prediction = DatasetSettings.getInstance().getClassNames().get(i);
-				}
+		double maxConf = getCombinedConfidence(prediction);
+		for(int i=1; i<DatasetSettings.getInstance().getClassNames().size(); i++){
+			double conf = getCombinedConfidence(DatasetSettings.getInstance().getClassNames().get(i));
+			if(conf > maxConf){
+				maxConf = conf;
+				prediction = DatasetSettings.getInstance().getClassNames().get(i);
 			}
-		}catch(Exception e){
-			System.out.println(prediction);
-			e.printStackTrace();
-			System.exit(0);
 		}
 		return prediction;
 	}

@@ -758,7 +758,7 @@ public class DataSettingsDialog extends JDialog {
 				if(returnVal == JFileChooser.APPROVE_OPTION) {								
 					String filePath = chooser.getSelectedFile().getAbsolutePath() + "/data.properties";
 					try{
-						loadProperties(filePath);						
+						loadProperties(filePath);			
 					}catch(Exception ex){
 						JOptionPane.showMessageDialog(DataSettingsDialog.this, "Error loading data properties from file '" + filePath + "'.\nReason: " + ex.getMessage(),
 								"Error loading properties file", JOptionPane.ERROR_MESSAGE); 

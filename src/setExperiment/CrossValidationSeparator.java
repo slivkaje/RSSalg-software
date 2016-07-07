@@ -127,14 +127,13 @@ public class CrossValidationSeparator {
 	 * Loads the data and prepares the n-fold-cross validation experiment 
 	 * 
 	 * @return array of prepared CoTrainingData objects, each corresponding to one labeled/unlabeled/test split in n-fold-cross validation experiment 
+	 * @throws Exception if the dataset files are missing or corrupt
 	 */
-	public CoTrainingData[] prepareCrossValidationExperiment(){
+	public CoTrainingData[] prepareCrossValidationExperiment() throws Exception{
 		try{
 			loadOriginalFiles();
 		}catch(Exception e){
-			System.out.println("Failed loading data files: " + e.getMessage());
-			System.out.println("Quitting program");
-			System.exit(1);
+			throw new Exception("ERROR: failed loading data files: " + e.getMessage(), e);			
 		}
 		
 		CoTrainingData[] data = new CoTrainingData[CVsettings.getNoFolds()];

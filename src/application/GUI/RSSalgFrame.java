@@ -430,10 +430,15 @@ public class RSSalgFrame extends JFrame {
 					try {
 						if (worker!=null)			       
 			                worker.cancel(false);			           
-			            worker = new SwingWorker(){			            
+			            worker = new SwingWorker(){			         
+			            			            	
 							@Override
 							protected Integer doInBackground() throws Exception {
-								startExperiment();	
+								try{
+									startExperiment();
+								}catch(Exception e){
+									JOptionPane.showMessageDialog(RSSalgFrame.this, e.getMessage(), "Error starting experiment", JOptionPane.ERROR_MESSAGE);
+								}
 								return 0;								
 							}			
 			            };
