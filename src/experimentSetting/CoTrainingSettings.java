@@ -155,7 +155,7 @@ public class CoTrainingSettings {
 			throw new Exception("ERROR: error reading properties file: file " + propertiesFile + "does not exist", e);
 		}	
 		clear();
-		System.out.println("Reading the dataset properties from file: " + propertiesFile);
+		System.out.println("Reading co-training settings from file: " + propertiesFile);
 		
 		
 		setPoolSize(PropertiesReader.readInt(properties, "poolSize"));

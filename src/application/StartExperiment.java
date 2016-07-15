@@ -311,7 +311,11 @@ public class StartExperiment {
 					StartExperiment experimentStarter = new StartExperiment();
 					experimentStarter.run();
 				}catch(Exception e){
-					System.out.println(e.getMessage());					
+					Throwable cause = e;
+					while(cause.getCause() != null) {
+					    cause = cause.getCause();
+					}
+					System.out.println(cause.getMessage());
 				}				
 			}else{
 				EventQueue.invokeLater(new Runnable() {

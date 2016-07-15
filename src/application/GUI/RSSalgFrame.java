@@ -437,7 +437,12 @@ public class RSSalgFrame extends JFrame {
 								try{
 									startExperiment();
 								}catch(Exception e){
-									JOptionPane.showMessageDialog(RSSalgFrame.this, e.getMessage(), "Error starting experiment", JOptionPane.ERROR_MESSAGE);
+									Throwable cause = e;
+									while(cause.getCause() != null) {
+									    cause = cause.getCause();
+									}
+									
+									JOptionPane.showMessageDialog(RSSalgFrame.this, cause.getMessage() , "Error starting experiment", JOptionPane.ERROR_MESSAGE);
 								}
 								return 0;								
 							}			
