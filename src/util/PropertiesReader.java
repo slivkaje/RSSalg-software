@@ -182,7 +182,7 @@ public class PropertiesReader {
 	}
 	
 	/**
-	 * Reads array of int values divided by blank spaces (e.g. 1 2 3)	
+	 * Reads array of int values. Possible formats: integers divided by blank spaces (e.g. 1 2 3); start:end; start:end:step	
 	 * 
 	 * @param properties The given properties
 	 * @param key key for the value to be retrieved           
@@ -190,7 +190,37 @@ public class PropertiesReader {
 	 * @throws Exception if the key is missing or the value is not array of integers
 	 */  
 	public static int[] readIntArrayParam(Properties properties, String key) throws Exception {
-		String[] strValues = readStringParam(properties, key).split(" ");		
+		String representation = readStringParam(properties, key);
+		
+		if(representation.contains(":")){
+			String[] strValues = representation.split(":");			
+			if (strValues.length > 3 || strValues.length < 2){
+				throw new Exception("Error reading an int array '" + representation + "'. Examples: key=1 2 3; key=1:3; key=1:3:1");
+			}
+			try{
+				int startVal = Integer.parseInt(strValues[0]);
+				int endVal = Integer.parseInt(strValues[1]);
+				if (endVal <= startVal){
+					throw new Exception("Error reading an int array '" + representation + "' - end value less or equal to start value");
+				}
+				int step = 1;
+				if(strValues.length == 3){
+					step = Integer.parseInt(strValues[2]);
+				}
+				int[] res = new int[(endVal - startVal)/step + 1];
+				int counter = 0;
+				for(int i=startVal; i<=endVal; i = i+step){
+					res[counter] = i;
+					counter++;
+				}
+				return res;
+			}catch(NumberFormatException ex){
+				throw new Exception("Error reading an int array '" + representation + "' - not an int value");
+			}
+		}
+		
+		
+		String[] strValues = representation.split(" ");		
 		int[] intValues = new int[strValues.length];
 		
 		for(int i=0; i<strValues.length; i++){

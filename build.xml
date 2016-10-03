@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+
+<project name="RSSalg" default="jar">
+
+	<target name="clean">
+    	<delete dir="./dist"/>
+	</target>
+
+	<target name="compile">
+    	<mkdir dir="./dist/classes"/>          
+    	<javac srcdir="./src" destdir="./dist/classes" includeantruntime="false">   
+    		<classpath>
+    			<pathelement path="lib/weka.jar"/>
+    		</classpath>
+    	</javac>                  
+	</target>
+
+	<target name="jar" depends="clean, compile">
+    	<mkdir dir="./dist/jar"/>
+		
+		<manifestclasspath property="jar.classpath" jarfile="${jar.file}">
+		    <classpath>
+		        <fileset dir="./lib" includes="*.jar"/>
+		    </classpath>
+		</manifestclasspath>
+    	
+		<jar destfile="./dist/jar/RSSalg.jar" basedir="./dist/classes">
+        	<manifest>
+        		<attribute name="Main-Class" value="application.StartExperiment" />
+        		<!-- <attribute name="Class-Path" value="${jar.classpath}" /> -->
+        	</manifest>
+			<zipgroupfileset dir="./lib" includes="**/*.jar" />
+    	</jar>
+	</target>
+
+	<target name="run_GUI">
+    	<java jar="./dist/jar/RSSalg.jar" fork="true"/>                    
+	</target>
+    		
+    <target name="run_console">
+    	<java jar="./dist/jar/RSSalg.jar" fork="true">  
+    		<arg value="./data/News2x2/experiment"/>
+    		<arg value="experiment_Co-training_Random.properties"/>
+    	</java>                  
+    </target>
+ 
+</project>
