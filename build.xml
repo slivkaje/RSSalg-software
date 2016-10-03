@@ -40,7 +40,7 @@
     <target name="run_console">
     	<java jar="./dist/jar/RSSalg.jar" fork="true">  
     		<arg value="./data/News2x2/experiment"/>
-    		<arg value="experiment_Co-training_Random.properties"/>
+    		<arg value="experiment_L.properties"/>
     	</java>                  
     </target>
  
