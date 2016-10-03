@@ -34,7 +34,7 @@ After installing Ant, open the terminal and navigate to the root of the project.
 
 Optionally, you load the source code from the ```src``` folder into your favorite IDE. Note that _RSSalg software_ implementation depends on Weka (version 3.7.0). Thus, you will need to add ```/lib/weka.jar``` library into your project. The starting point for running _RSSalg software_ is the class `StartExperiment`, located inside `src/application`.
 
-### **Running the project**
+### **Running the project by using the built executable**
 
 Open the terminal and navigate to the executable RSSalg.jar.
  
@@ -55,7 +55,9 @@ Open the terminal and navigate to the executable RSSalg.jar.
 	java -jar RSSalg.jar
 	```
 
-Optionally, you can use Ant to run _RSSalg software_. Open the terminal and navigate to the root of the project (containing build.xml): 
+### **Running the project by using Ant**
+
+Open the terminal and navigate to the root of the project (containing build.xml): 
 	
 * You can run _RSSalg software_ in GUI mode by typing the command ```ant run_GUI```
 
