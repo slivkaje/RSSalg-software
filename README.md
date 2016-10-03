@@ -1,7 +1,7 @@
-# RSSalg-software
+# _RSSalg-software_
 
 **A tool for co-training application on single-view datasets.**
-RSSalg software is intended for easy and flexible experimenting with both RSSalg and co-training.
+_RSSalg software_ is intended for easy and flexible experimenting with both RSSalg and co-training.
 
 Co-training is a major semi-supervised learning technique. It is applicable on the datasets whose features can be divided in two separate feature subsets called views. Ideally, this feature division is dictated by two independent sources of information describing the data. 
 
@@ -16,20 +16,27 @@ with Ensemble Learning for Application on Single-View Natural Language Datasets"
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. 
 
-The illustrative example and detailed instructions of running RSSalg software is located in /docs/IllustrativeExample.pdf
+The illustrative example and detailed instructions of running _RSSalg software_ is located in /docs/IllustrativeExample.pdf
 
 ### Prerequisities
 
-In order to run RSSalg-software you need to have the following things installed
+In order to run _RSSalg software_ you need to have the following things installed
 
 ```
 Java v1.7 or above
 ```
 To install Java go to http://www.oracle.com/technetwork/indexes/downloads/index.html#java
 
-### Running
+### Building the project
 
-In order to run RSS-alg software you can run the executable distribution, located in the "dist" folder, by typing the following command in the terminal:
+The easiest way to build and run the project is by using Apache Ant (http://ant.apache.org/). You will find the Apache Ant script named "build.xml" in the root of the project.
+After installing Ant, open the terminal and navigate to the root of the project. Type the command ```ant```. This will compile and package the code in an executable located in /dist/jar/RSSalg.jar
+
+Optionally, you load the source code from the ```src``` folder into your favorite IDE. Note that _RSSalg software_ implementation depends on Weka (version 3.7.0). Thus, you will need to add ```/lib/weka.jar``` library into your project. The starting point for running _RSSalg software_ is the class `StartExperiment`, located inside `src/application`.
+
+### **Running the project**
+
+Open the terminal and navigate to the executable RSSalg.jar.
  
 1. Running RSSalg software in console:
 	```
@@ -46,11 +53,14 @@ In order to run RSS-alg software you can run the executable distribution, locate
 2. Running RSSalg software as swing application
 	```
 	java -jar RSSalg.jar
-	
 	```
 
-Optionally, you load the source code from the "src" folder into your favorite IDE. Note that RSSalg software implementation depends on Weka (version 3.4 or above). Thus, you will need to add weka.jar library into your project (weka.jar can be dowloaded from http://www.cs.waikato.ac.nz/ml/weka/downloading.html). The starting point for running RSSalg software is the class `StartExperiment`, located inside `src/application`.
+Optionally, you can use Ant to run _RSSalg software_. Open the terminal and navigate to the root of the project (containing build.xml): 
+	
+* You can run _RSSalg software_ in GUI mode by typing the command ```ant run_GUI```
 
+* You can run _RSSalg software_ in console mode by typing the command ```ant run_console```. In this case you need to modify the arguments of target run_console located in build.xml to correspond to the adequate `properties_folder` and `experiment_properties`.
+	
 ## Author
 
 * **Jelena Slivka** - [GitHub](https://github.com/slivkaje)
