@@ -190,12 +190,12 @@ public class CoTrainingData {
 		}
 		
 		for(int view=0; view<labeledData.length; view++){
-			InstancesManipulation.writeArff(path + "/labeled_view" + view + ".arff", this.labeledData[view]);
-			InstancesManipulation.writeArff(path + "/unlabeled_view" + view + ".arff", this.unlabeledData[view]);						
-			InstancesManipulation.writeArff(path + "/test_view" + view + ".arff", this.testData[view]);
+			InstancesManipulation.writeArff(path + File.separator + "labeled_view" + view + ".arff", this.labeledData[view]);
+			InstancesManipulation.writeArff(path + File.separator + "unlabeled_view" + view + ".arff", this.unlabeledData[view]);						
+			InstancesManipulation.writeArff(path + File.separator + "test_view" + view + ".arff", this.testData[view]);
 			if(ctSettings.getPoolSize() != 0) // if pool is used
 				if(poolData != null && poolData[0].numInstances() > 1) // if pool not empty
-					InstancesManipulation.writeArff(path + "/pool_view" + view + ".arff", this.poolData[view]);
+					InstancesManipulation.writeArff(path + File.separator + "pool_view" + view + ".arff", this.poolData[view]);
 		}		
 	}
 
@@ -231,18 +231,18 @@ public class CoTrainingData {
 		this.labeledData = new Instances[noViews];
 		this.unlabeledData = new Instances[noViews];
 		this.testData = new Instances[noViews];
-		File poolFile = new File(path + "/pool_view0.arff");
+		File poolFile = new File(path + File.separator + "pool_view0.arff");
 		if(poolFile.exists())				
 			this.poolData = new Instances[noViews];
 		
 		
 		for(int view=0; view<noViews; view++){			
-			this.labeledData[view] = InstancesManipulation.readArff(path + "/labeled_view" + view + ".arff", setClass);
-			this.unlabeledData[view] = InstancesManipulation.readArff(path + "/unlabeled_view" + view + ".arff", setClass);
-			this.testData[view] = InstancesManipulation.readArff(path + "/test_view" + view + ".arff", setClass);
+			this.labeledData[view] = InstancesManipulation.readArff(path + File.separator + "labeled_view" + view + ".arff", setClass);
+			this.unlabeledData[view] = InstancesManipulation.readArff(path + File.separator + "unlabeled_view" + view + ".arff", setClass);
+			this.testData[view] = InstancesManipulation.readArff(path + File.separator + "test_view" + view + ".arff", setClass);
 			
 			if(poolFile.exists())			
-				this.poolData[view] = InstancesManipulation.readArff(path + "/pool_view" + view + ".arff", setClass);
+				this.poolData[view] = InstancesManipulation.readArff(path + File.separator + "pool_view" + view + ".arff", setClass);
 		}
 	}
 	

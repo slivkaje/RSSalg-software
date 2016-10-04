@@ -9,6 +9,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 import java.util.Random;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import util.PropertiesReader;
 import weka.classifiers.Classifier;
@@ -84,16 +86,18 @@ public class DatasetSettings {
 		return fileNames;
 	}
 	private void setFileNames(List<String> fileNames) throws Exception {
-		this.fileNames = fileNames;
+		this.fileNames = new ArrayList<>();
 		noViews = fileNames.size();
 		if (noViews > 2)
 			throw new Exception("ERROR: read data for " + noViews + " views. Currently supports just 2 views");
 		
-		for(int i=0; i<fileNames.size(); i++){
-			String fileName = fileNames.get(i);
+		for(int i=0; i<fileNames.size(); i++){			
+			String fileName = fileNames.get(i);						
+			fileName = fileName.replace("\\",  Matcher.quoteReplacement(File.separator));			
 			File tmp = new File(fileName);
 			if(!tmp.exists())
 				throw new Exception("ERROR: file '" + fileName + "' set for view " + i + " does not exist");
+			this.fileNames.add(fileName);
 		}
 	}
 	public List<String> getClassNames() {
@@ -159,6 +163,9 @@ public class DatasetSettings {
 	private void setResultFolder(String resultFolder) throws Exception {
 		if(resultFolder == null)
 			throw new Exception("ERROR: missing path to result folder");
+		
+		resultFolder = resultFolder.replace("\\",  Matcher.quoteReplacement(File.separator));
+		
 		File folder = new File(resultFolder);
 		if(!folder.exists()){
 			System.out.println("Creating directory \"" + resultFolder + "\" for recording results.");
@@ -210,7 +217,7 @@ public class DatasetSettings {
 			properties = new Properties();
 			properties.load(new FileInputStream(PropertiesFile));
 		}catch (FileNotFoundException e) {
-			throw new Exception("ERROR: error reading properties file: file " + PropertiesFile + " does not exist.", e);
+			throw new Exception("ERROR: error reading properties file: file '" + PropertiesFile + "' does not exist.", e);
 		}	
 		claerSettings();
 		System.out.println("Reading the dataset properties from file: " + PropertiesFile);

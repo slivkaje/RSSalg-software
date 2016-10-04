@@ -110,7 +110,7 @@ public class DataSettingsDialog extends JDialog {
 	private final JButton btnCancel = new JButton("Cancel");
 	
 	private String saveFileLoc = null;
-	private String lastViewFileLoc = "./data";
+	private String lastViewFileLoc = "." + File.separator + "data";
 	private final JLabel lblWhenTiedClassify = new JLabel("When tied classify as:");
 	private final JComboBox<String> cbFirstClass = new JComboBox<String>();
 	
@@ -192,8 +192,8 @@ public class DataSettingsDialog extends JDialog {
 			
 			viewsTabeModel.addElement(file.getAbsolutePath());
 
-			tableViews.getColumnModel().getColumn(0).setPreferredWidth(35);
-			tableViews.getColumnModel().getColumn(1).setPreferredWidth(tableViews.getWidth()-35);
+			tableViews.getColumnModel().getColumn(0).setMaxWidth(50);
+//			tableViews.getColumnModel().getColumn(1).setPreferredWidth(tableViews.getWidth()-tableViews.getWidth()/4);
 			
 			lastViewFileLoc = file.getPath();						 						
 			updateAttributeLists();			
@@ -211,12 +211,12 @@ public class DataSettingsDialog extends JDialog {
 			try {
 				int noViews = 0;
 				while(true){
-					File labeledViewFile = new File(tfLoadDataFolder.getText() + "/fold_0/labeled_view" + noViews + ".arff");
+					File labeledViewFile = new File(tfLoadDataFolder.getText() + File.separator + "fold_0" + File.separator + "labeled_view" + noViews + ".arff");
 					if(!labeledViewFile.exists())
 						break;
 					noViews++;
 				}
-				CoTrainingData data = new CoTrainingData(tfLoadDataFolder.getText() + "\\fold_0\\", noViews, false);
+				CoTrainingData data = new CoTrainingData(tfLoadDataFolder.getText() + File.separator + "fold_0" + File.separator, noViews, false);
 				for(Instances view : data.getLabeledData()){
 					views.add(view);
 					updateViewModelsTable(views.size());
@@ -226,7 +226,7 @@ public class DataSettingsDialog extends JDialog {
 				e1.printStackTrace();
 			}			
 		}else{
-			tfResultsFolder.setText("./data/result");
+			tfResultsFolder.setText("." + File.separator + "data" + File.separator + "result");
 			
 			int noViews = Integer.parseInt(tfNoViews.getText());
 			for(int i=1; i<=noViews; i++)
@@ -389,7 +389,7 @@ public class DataSettingsDialog extends JDialog {
 		
 			DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
 			Calendar cal = Calendar.getInstance();						
-			dataPropertiesFile.store(new FileOutputStream(path + "/data.properties"), dateFormat.format(cal.getTime()));
+			dataPropertiesFile.store(new FileOutputStream(path + File.separator + "data.properties"), dateFormat.format(cal.getTime()));
 		}catch(Exception e){
 			e.printStackTrace();
 		}
@@ -403,7 +403,7 @@ public class DataSettingsDialog extends JDialog {
 			tfLoadDataFolder.setText(DatasetSettings.getInstance().getResultFolder());
 			rbLoadExperiment.setSelected(true);
 			btnLoadData.setEnabled(true);
-			CoTrainingData data = new CoTrainingData(tfLoadDataFolder.getText() + "\\fold_0\\", DatasetSettings.getInstance().getNoViews(), false);
+			CoTrainingData data = new CoTrainingData(tfLoadDataFolder.getText() + File.separator + "fold_0" + File.separator, DatasetSettings.getInstance().getNoViews(), false);
 			for(Instances view : data.getLabeledData()){
 				views.add(view);	
 				updateAttributeLists();
@@ -463,11 +463,11 @@ public class DataSettingsDialog extends JDialog {
 		setResizable(false);
 		setModal(true);
 		tfCombinedViewsModel.setText("weka.classifiers.bayes.NaiveBayes");
-		tfCombinedViewsModel.setBounds(12, 47, 333, 22);
+		tfCombinedViewsModel.setBounds(12, 47, 412, 22);
 		tfCombinedViewsModel.setColumns(10);
-		tfResultsFolder.setBounds(12, 47, 283, 22);
+		tfResultsFolder.setBounds(12, 47, 364, 22);
 		tfResultsFolder.setColumns(10);
-		setBounds(100, 100, 752, 562);
+		setBounds(100, 100, 900, 562);
 		setLocationRelativeTo(owner);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -476,21 +476,21 @@ public class DataSettingsDialog extends JDialog {
 		
 		tfNoViews.setEnabled(false);
 		tfNoViews.setText("2");
-		tfNoViews.setBounds(144, 43, 43, 22);
+		tfNoViews.setBounds(172, 43, 43, 22);
 		
 		datasetPanel.setBorder(new TitledBorder(null, "Dataset", TitledBorder.LEADING, TitledBorder.TOP, null, null));
-		datasetPanel.setBounds(12, 244, 338, 112);
+		datasetPanel.setBounds(12, 244, 423, 112);
 		contentPane.add(datasetPanel);
 		datasetPanel.setLayout(null);
 		labelClassAttName.setHorizontalAlignment(SwingConstants.RIGHT);
 		
 		
-		labelClassAttName.setBounds(12, 26, 123, 16);
+		labelClassAttName.setBounds(12, 26, 205, 16);
 		datasetPanel.add(labelClassAttName);
 		labelIdAttName.setHorizontalAlignment(SwingConstants.RIGHT);
 		
 		
-		labelIdAttName.setBounds(20, 55, 116, 16);
+		labelIdAttName.setBounds(20, 55, 197, 16);
 		datasetPanel.add(labelIdAttName);
 		
 		rbLoadExperiment.addActionListener(new ActionListener() {
@@ -504,14 +504,14 @@ public class DataSettingsDialog extends JDialog {
 		tfLoadDataFolder = new JTextField();
 		tfLoadDataFolder.setEditable(false);
 		tfLoadDataFolder.setEnabled(false);
-		tfLoadDataFolder.setBounds(81, 194, 550, 22);
+		tfLoadDataFolder.setBounds(81, 194, 675, 22);
 		contentPane.add(tfLoadDataFolder);
 		tfLoadDataFolder.setColumns(10);
 		btnLoadData.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				JFileChooser chooser = new JFileChooser();
 				chooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
-				chooser.setCurrentDirectory(new File("./data"));
+				chooser.setCurrentDirectory(new File("." + File.separator + "data"));
 				int returnVal = chooser.showOpenDialog(DataSettingsDialog.this);
 				if(returnVal == JFileChooser.APPROVE_OPTION) {
 					String resultDirectory = chooser.getSelectedFile().getAbsolutePath(); 
@@ -519,13 +519,13 @@ public class DataSettingsDialog extends JDialog {
 					try {
 						int noViews = 0;
 						while(true){
-							File labeledViewFile = new File(resultDirectory + "/fold_0/labeled_view" + noViews + ".arff");
+							File labeledViewFile = new File(resultDirectory + File.separator + "fold_0" + File.separator + "labeled_view" + noViews + ".arff");
 							if(!labeledViewFile.exists())
 								break;
 							noViews++;
 						}
 						
-						CoTrainingData data = new CoTrainingData(resultDirectory + "/fold_0/", noViews, false);
+						CoTrainingData data = new CoTrainingData(resultDirectory + File.separator + "fold_0" + File.separator, noViews, false);
 						if(data.getLabeledData().length == 0){
 							throw new Exception("No experiment to load in directory: '" + resultDirectory + "'.\nThe selected directory should contain"
 									+ " subdirectories fold_0, fold_1,... Each of the subdirectories should contain 4 x <no of views> arff files."
@@ -553,7 +553,7 @@ public class DataSettingsDialog extends JDialog {
 		
 		
 		btnLoadData.setEnabled(false);
-		btnLoadData.setBounds(643, 194, 85, 22);
+		btnLoadData.setBounds(766, 194, 113, 22);
 		contentPane.add(btnLoadData);
 		
 		
@@ -573,11 +573,11 @@ public class DataSettingsDialog extends JDialog {
 		contentPane.add(lblFolder);
 		
 		
-		lblDataFiles.setBounds(36, 71, 66, 16);
+		lblDataFiles.setBounds(36, 71, 131, 16);
 		contentPane.add(lblDataFiles);
 		
 		
-		btnAddDataFile.setBounds(648, 87, 85, 22);
+		btnAddDataFile.setBounds(771, 87, 113, 22);
 		btnAddDataFile.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {			
 				JFileChooser chooser = new JFileChooser();
@@ -592,13 +592,13 @@ public class DataSettingsDialog extends JDialog {
 					if(viewsTabeModel.getRowCount() == 2)
 						btnAddDataFile.setEnabled(false);					
 					if(chooser.getSelectedFile().getParent() != null)
-						tfResultsFolder.setText(chooser.getSelectedFile().getParent() + "\\result");					
+						tfResultsFolder.setText(chooser.getSelectedFile().getParent() + File.separator + "result");					
 				}				
 			}
 		});
 		contentPane.add(btnAddDataFile);
 				
-		btnRemoveDataFile.setBounds(648, 113, 85, 25);
+		btnRemoveDataFile.setBounds(771, 113, 113, 25);
 		btnRemoveDataFile.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				int selectedInd = tableViews.getSelectedRow();
@@ -621,10 +621,10 @@ public class DataSettingsDialog extends JDialog {
 		contentPane.add(btnRemoveDataFile);
 	
 		rbCreateACv.setSelected(true);
-		lblResultsFolder.setBounds(12, 27, 83, 16);
+		lblResultsFolder.setBounds(12, 27, 191, 16);
 		
 		panelExperiments.setBorder(new TitledBorder(UIManager.getBorder("TitledBorder.border"), "All experiments", TitledBorder.LEADING, TitledBorder.TOP, null, null));
-		panelExperiments.setBounds(12, 361, 338, 112);
+		panelExperiments.setBounds(12, 361, 423, 112);
 		
 		contentPane.add(panelExperiments);
 		panelExperiments.setLayout(null);
@@ -644,11 +644,11 @@ public class DataSettingsDialog extends JDialog {
 				}
 			}
 		});
-		btnResultsFolder.setBounds(300, 47, 27, 22);
+		btnResultsFolder.setBounds(386, 47, 27, 22);
 		panelExperiments.add(btnResultsFolder);
-		lblRandomNumberGenerator.setHorizontalAlignment(SwingConstants.RIGHT);
+		lblRandomNumberGenerator.setHorizontalAlignment(SwingConstants.LEFT);
 		
-		lblRandomNumberGenerator.setBounds(12, 78, 191, 16);
+		lblRandomNumberGenerator.setBounds(12, 78, 257, 16);
 		
 		panelExperiments.add(lblRandomNumberGenerator);
 		
@@ -657,9 +657,9 @@ public class DataSettingsDialog extends JDialog {
 		setDataLoaded(false);
 		
 		
-		cbClassAtt.setBounds(139, 23, 187, 22);
+		cbClassAtt.setBounds(226, 23, 187, 22);
 		datasetPanel.add(cbClassAtt);
-		cbIdAtt.setBounds(140, 52, 186, 22);
+		cbIdAtt.setBounds(227, 52, 186, 22);
 		cbClassAtt.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {		
 				int itemCount = cbClassAtt.getItemCount();
@@ -676,24 +676,24 @@ public class DataSettingsDialog extends JDialog {
 		
 		datasetPanel.add(cbIdAtt);
 		lblWhenTiedClassify.setHorizontalAlignment(SwingConstants.RIGHT);
-		lblWhenTiedClassify.setBounds(5, 84, 130, 16);
+		lblWhenTiedClassify.setBounds(5, 84, 211, 16);
 		
 		datasetPanel.add(lblWhenTiedClassify);
-		cbFirstClass.setBounds(139, 81, 187, 22);
+		cbFirstClass.setBounds(226, 81, 187, 22);
 		
 		datasetPanel.add(cbFirstClass);
 		panelLearningModels.setBorder(new TitledBorder(null, "Learning models", TitledBorder.LEADING, TitledBorder.TOP, null, null));
-		panelLearningModels.setBounds(371, 244, 357, 229);
+		panelLearningModels.setBounds(445, 244, 434, 229);
 		
 		contentPane.add(panelLearningModels);
 		panelLearningModels.setLayout(null);
 		
-		scrollPane_1.setBounds(12, 82, 333, 134);
+		scrollPane_1.setBounds(12, 82, 412, 134);
 		
 		panelLearningModels.add(scrollPane_1);
 		
 		scrollPane_1.setViewportView(tableLearningModels);
-		lblCombinedViewsModel.setBounds(12, 22, 146, 16);
+		lblCombinedViewsModel.setBounds(12, 22, 216, 16);
 		
 		panelLearningModels.add(lblCombinedViewsModel);
 		
@@ -701,7 +701,7 @@ public class DataSettingsDialog extends JDialog {
 	
 		group.add(rbCreateACv);
 		group.add(rbLoadExperiment);
-		spViews.setBounds(35, 87, 601, 64);
+		spViews.setBounds(35, 87, 726, 64);
 		
 		contentPane.add(spViews);
 		
@@ -720,14 +720,14 @@ public class DataSettingsDialog extends JDialog {
 				}
 			}
 		});
-		chckbxUseForAll.setBounds(155, 19, 130, 25);
+		chckbxUseForAll.setBounds(234, 18, 190, 25);
 		
 		panelLearningModels.add(chckbxUseForAll);
 			
 		tfRandomSeed = new JFormattedTextField(NumberFormat.getIntegerInstance());
 		tfRandomSeed.setText("2016");
 		
-		tfRandomSeed.setBounds(207, 76, 88, 22);
+		tfRandomSeed.setBounds(279, 75, 97, 22);
 		
 		panelExperiments.add(tfRandomSeed);
 		btnSave.addActionListener(new ActionListener() {
@@ -746,7 +746,7 @@ public class DataSettingsDialog extends JDialog {
 				}				
 			}
 		});
-		btnSave.setBounds(499, 486, 127, 25);
+		btnSave.setBounds(371, 498, 166, 25);
 		
 		contentPane.add(btnSave);
 		btnLoad.addActionListener(new ActionListener() {
@@ -756,7 +756,7 @@ public class DataSettingsDialog extends JDialog {
 				chooser.setCurrentDirectory(new File(lastViewFileLoc));
 				int returnVal = chooser.showOpenDialog(DataSettingsDialog.this);
 				if(returnVal == JFileChooser.APPROVE_OPTION) {								
-					String filePath = chooser.getSelectedFile().getAbsolutePath() + "/data.properties";
+					String filePath = chooser.getSelectedFile().getAbsolutePath() + File.separator + "data.properties";
 					try{
 						loadProperties(filePath);			
 					}catch(Exception ex){
@@ -766,7 +766,7 @@ public class DataSettingsDialog extends JDialog {
 				}
 			}
 		});
-		btnLoad.setBounds(381, 486, 113, 25);
+		btnLoad.setBounds(195, 498, 166, 25);
 		
 		contentPane.add(btnLoad);
 		tableLearningModels.putClientProperty("terminateEditOnFocusLost", Boolean.TRUE);
@@ -785,7 +785,8 @@ public class DataSettingsDialog extends JDialog {
 		
 		
 		chckbxUseForAll.setSelected(true);
-		lblNumberOfViews.setBounds(35, 46, 113, 16);
+		lblNumberOfViews.setHorizontalAlignment(SwingConstants.LEFT);
+		lblNumberOfViews.setBounds(35, 46, 132, 16);
 		
 		contentPane.add(lblNumberOfViews);
 		
@@ -798,7 +799,7 @@ public class DataSettingsDialog extends JDialog {
 				dispose();
 			}
 		});
-		btnCancel.setBounds(631, 486, 97, 25);
+		btnCancel.setBounds(547, 498, 166, 25);
 		
 		contentPane.add(btnCancel);
 		learningModelsTabeModel.setVisible(false);
@@ -809,10 +810,10 @@ public class DataSettingsDialog extends JDialog {
 		}
 	}
 	
-	public String showDialog(){
+	public String showDialog(){		
 		setVisible(true);
 		if(saveFileLoc != null)
-			return saveFileLoc + "\\data.properties";
+			return saveFileLoc + File.separator + "data.properties";
 		else 
 			return null;
 	}

@@ -31,6 +31,7 @@ import javax.swing.border.EmptyBorder;
 
 import experimentSetting.CoTrainingSettings;
 import experimentSetting.DatasetSettings;
+import javax.swing.SwingConstants;
 
 
 
@@ -130,16 +131,16 @@ public class CoTrainingPropertiesDialog extends JDialog {
 			
 			DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
 			Calendar cal = Calendar.getInstance();
-			FileOutputStream out = new FileOutputStream(path + "/co-training.properties");
+			FileOutputStream out = new FileOutputStream(path + File.separator + "co-training.properties");
 			ctPropertiesFile.store(out, dateFormat.format(cal.getTime()));
 			out.flush();
 			out.close();
 			
-			ctPropertiesFile.store(new FileOutputStream(path + "/co-training.properties"), dateFormat.format(cal.getTime()));			 
+			ctPropertiesFile.store(new FileOutputStream(path + File.separator + "co-training.properties"), dateFormat.format(cal.getTime()));			 
 			saveFileLoc = path;
 		}catch(Exception e){
 			JOptionPane.showMessageDialog(CoTrainingPropertiesDialog.this, "Error saving co-training settings to file '" 
-					+ path + "/co-training.properties" + "'. Reason: " + e.getMessage(), "Error saving co-training settings", JOptionPane.ERROR_MESSAGE);
+					+ path + File.separator + "co-training.properties" + "'. Reason: " + e.getMessage(), "Error saving co-training settings", JOptionPane.ERROR_MESSAGE);
 		}
 	}
 	
@@ -179,7 +180,7 @@ public class CoTrainingPropertiesDialog extends JDialog {
 		super(owner, true);
 		setTitle("Co-training settings");
 		setResizable(false);
-		setBounds(100, 100, 352, 339);
+		setBounds(100, 100, 409, 322);
 		setLocationRelativeTo(owner);
 		getContentPane().setLayout(new BorderLayout());
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -191,11 +192,12 @@ public class CoTrainingPropertiesDialog extends JDialog {
 		{
 			tfK = new JFormattedTextField(amountFormat);
 			tfK.setText("20");
-			tfK.setBounds(203, 12, 51, 22);
+			tfK.setBounds(245, 10, 148, 22);
 			contentPanel.add(tfK);
 		}
 		ButtonGroup group = new ButtonGroup();
 		{
+			rdbtnNoIts.setHorizontalAlignment(SwingConstants.LEFT);
 			rdbtnNoIts.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					if(rdbtnAllUnlabeled.isSelected()){
@@ -206,7 +208,7 @@ public class CoTrainingPropertiesDialog extends JDialog {
 				}
 			});
 			
-			rdbtnNoIts.setBounds(8, 9, 195, 25);
+			rdbtnNoIts.setBounds(8, 9, 231, 25);
 			contentPanel.add(rdbtnNoIts);
 			group.add(rdbtnNoIts);
 			rdbtnNoIts.setSelected(true);
@@ -222,24 +224,24 @@ public class CoTrainingPropertiesDialog extends JDialog {
 				}
 			});
 			
-			rdbtnAllUnlabeled.setBounds(8, 39, 233, 25);
+			rdbtnAllUnlabeled.setBounds(8, 39, 385, 25);
 			contentPanel.add(rdbtnAllUnlabeled);
 			group.add(rdbtnAllUnlabeled);
 		}
 		{
 			JLabel lblPoolSize = new JLabel("Pool size:");
-			lblPoolSize.setBounds(18, 73, 56, 16);
+			lblPoolSize.setBounds(18, 73, 70, 16);
 			contentPanel.add(lblPoolSize);
 		}
 		{
 			tfPoolSize = new JFormattedTextField(amountFormat);
 			tfPoolSize.setText("50");
-			tfPoolSize.setBounds(78, 70, 40, 22);
+			tfPoolSize.setBounds(97, 70, 70, 22);
 			contentPanel.add(tfPoolSize);
 		}
 		{
 			JScrollPane scrollPane = new JScrollPane();
-			scrollPane.setBounds(18, 124, 300, 92);
+			scrollPane.setBounds(8, 124, 385, 92);
 			contentPanel.add(scrollPane);
 			{
 				tableClassNames.putClientProperty("terminateEditOnFocusLost", Boolean.TRUE);
@@ -249,12 +251,12 @@ public class CoTrainingPropertiesDialog extends JDialog {
 		}
 		{
 			JLabel lblGrowthSizePer = new JLabel("Growth size per iteration:");
-			lblGrowthSizePer.setBounds(18, 102, 168, 16);
+			lblGrowthSizePer.setBounds(8, 100, 328, 16);
 			contentPanel.add(lblGrowthSizePer);
 		}
 		{
 			
-			chckbxTestEachIteration.setBounds(18, 225, 135, 25);
+			chckbxTestEachIteration.setBounds(8, 226, 328, 25);
 			contentPanel.add(chckbxTestEachIteration);
 		}
 		{
@@ -292,7 +294,7 @@ public class CoTrainingPropertiesDialog extends JDialog {
 							chooser.setCurrentDirectory(new File(lastSaveFileLoc));
 							int returnVal = chooser.showOpenDialog(CoTrainingPropertiesDialog.this);
 							if(returnVal == JFileChooser.APPROVE_OPTION) {								
-								String filePath = chooser.getSelectedFile().getAbsolutePath() + "/co-training.properties";
+								String filePath = chooser.getSelectedFile().getAbsolutePath() + File.separator + "co-training.properties";
 								try{
 									loadProperties(filePath);						
 								}catch(Exception ex){
@@ -334,7 +336,7 @@ public class CoTrainingPropertiesDialog extends JDialog {
 	public String showDialog(){
 		setVisible(true);
 		if(saveFileLoc != null)
-			return saveFileLoc + "\\co-training.properties";
+			return saveFileLoc + File.separator + "co-training.properties";
 		else
 			return null;
 	}

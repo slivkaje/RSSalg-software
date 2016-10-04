@@ -42,6 +42,7 @@ import classificationResult.measures.MeasureIF;
 import algorithms.RSSalg.resultStatistic.ClassifierEnsembleList;
 import experimentSetting.DatasetSettings;
 import experimentSetting.ExperimentSettings;
+import javax.swing.SwingConstants;
 
 public class ExperimentSettingsDialog extends JDialog {
 	private static final long serialVersionUID = 1L;
@@ -234,7 +235,7 @@ public class ExperimentSettingsDialog extends JDialog {
 		String filename = "experiment_" + algorithm;
 		if(algorithm.equals("Co-training"))
 			filename += "_" + split;
-		filename = path + "/" + filename + ".properties";		
+		filename = path + File.separator + filename + ".properties";		
 		
 		try{
 			FileOutputStream out = new FileOutputStream(filename);		
@@ -283,7 +284,7 @@ public class ExperimentSettingsDialog extends JDialog {
 						if(!tfLoadClassifiersFile.getText().equals("")){
 							ClassifierEnsembleList cl = new ClassifierEnsembleList();
 							try{
-								cl.fromXML(DatasetSettings.getInstance().getResultFolder() + "/fold_0/" + tfLoadClassifiersFile.getText());
+								cl.fromXML(DatasetSettings.getInstance().getResultFolder() + File.separator + "fold_0" + File.separator + tfLoadClassifiersFile.getText());
 							}catch(JAXBException ex){
 								ex.printStackTrace();
 							}
@@ -331,12 +332,12 @@ public class ExperimentSettingsDialog extends JDialog {
 				}
 			});
 			cbAlgorithm.setModel(new DefaultComboBoxModel<String>(new String[] {"L", "All", "Co-training", "MV", "RSSalg", "RSSalg_best"}));
-			cbAlgorithm.setBounds(80, 13, 99, 22);
+			cbAlgorithm.setBounds(124, 13, 374, 22);
 			contentPanel.add(cbAlgorithm);
 		}
 		{
 			JLabel lblAlgorithm = new JLabel("Algorithm:");
-			lblAlgorithm.setBounds(12, 16, 77, 16);
+			lblAlgorithm.setBounds(12, 16, 102, 16);
 			contentPanel.add(lblAlgorithm);
 		}
 		{
@@ -364,7 +365,7 @@ public class ExperimentSettingsDialog extends JDialog {
 			}
 			{
 				JLabel label = new JLabel("Measure:");
-				label.setBounds(10, 128, 66, 16);
+				label.setBounds(10, 128, 112, 16);
 				panelMeasures.add(label);
 			}
 			{				
@@ -385,7 +386,7 @@ public class ExperimentSettingsDialog extends JDialog {
 			}
 			{
 				JLabel lblForClass = new JLabel("For class:");
-				lblForClass.setBounds(134, 128, 56, 16);
+				lblForClass.setBounds(134, 128, 143, 16);
 				panelMeasures.add(lblForClass);
 			}
 			{				
@@ -426,7 +427,7 @@ public class ExperimentSettingsDialog extends JDialog {
 		}
 		{
 			JLabel lblFeatureSplit = new JLabel("Feature split:");
-			lblFeatureSplit.setBounds(12, 262, 84, 16);
+			lblFeatureSplit.setBounds(12, 262, 140, 16);
 			contentPanel.add(lblFeatureSplit);
 		}
 		{
@@ -444,7 +445,7 @@ public class ExperimentSettingsDialog extends JDialog {
 				}
 			});
 			cbFeatureSplit.setModel(new DefaultComboBoxModel<String>(new String[] {"None"}));
-			cbFeatureSplit.setBounds(12, 284, 105, 22);
+			cbFeatureSplit.setBounds(12, 284, 140, 22);
 			contentPanel.add(cbFeatureSplit);
 		}
 		{			
@@ -461,7 +462,7 @@ public class ExperimentSettingsDialog extends JDialog {
 						if(!tfLoadClassifiersFile.getText().equals("")){
 							ClassifierEnsembleList cl = new ClassifierEnsembleList();
 							try{
-								cl.fromXML(DatasetSettings.getInstance().getResultFolder() + "/fold_0/" + tfLoadClassifiersFile.getText());
+								cl.fromXML(DatasetSettings.getInstance().getResultFolder() + File.separator + "fold_0" + File.separator + tfLoadClassifiersFile.getText());
 							}catch(JAXBException ex){
 								ex.printStackTrace();
 							}
@@ -474,47 +475,48 @@ public class ExperimentSettingsDialog extends JDialog {
 					}
 				}
 			});
-			chckbxLoadClassifiers.setBounds(12, 325, 131, 25);
+			chckbxLoadClassifiers.setBounds(12, 325, 191, 25);
 			contentPanel.add(chckbxLoadClassifiers);
 		}
 		{			
 			chckbxWriteClassifiers.setSelected(true);
-			chckbxWriteClassifiers.setBounds(12, 380, 191, 25);
+			chckbxWriteClassifiers.setBounds(12, 380, 486, 25);
 			contentPanel.add(chckbxWriteClassifiers);
 		}
 		{			
 			chckbxWriteEnlargedTraining.setEnabled(false);
-			chckbxWriteEnlargedTraining.setBounds(12, 410, 191, 25);
+			chckbxWriteEnlargedTraining.setBounds(12, 410, 486, 25);
 			contentPanel.add(chckbxWriteEnlargedTraining);
 		}
 		{
 			JLabel lblNumberOfSplits = new JLabel("Number of splits:");
-			lblNumberOfSplits.setBounds(129, 267, 105, 16);
+			lblNumberOfSplits.setBounds(162, 262, 141, 16);
 			contentPanel.add(lblNumberOfSplits);
 		}
 		{			
 			tfNoSplits.setEnabled(false);
 			tfNoSplits.setText("0");
-			tfNoSplits.setBounds(129, 284, 105, 22);
+			tfNoSplits.setBounds(162, 284, 141, 22);
 			contentPanel.add(tfNoSplits);
 		}
 		{
+			lblFileName.setHorizontalAlignment(SwingConstants.RIGHT);
 			lblFileName.setEnabled(false);
 			
-			lblFileName.setBounds(36, 355, 87, 16);
+			lblFileName.setBounds(12, 355, 114, 16);
 			contentPanel.add(lblFileName);
 		}
 		{
 			tfLoadClassifiersFile = new JTextField();
 			tfLoadClassifiersFile.setEditable(false);
-			tfLoadClassifiersFile.setBounds(103, 353, 348, 22);
+			tfLoadClassifiersFile.setBounds(131, 353, 327, 22);
 			contentPanel.add(tfLoadClassifiersFile);
 			tfLoadClassifiersFile.setColumns(10);
 		}
 		{			
 			btnBrowse.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
-					final File resultsDir = new File(DatasetSettings.getInstance().getResultFolder() + "/fold_0/");
+					final File resultsDir = new File(DatasetSettings.getInstance().getResultFolder() + File.separator + "fold_0" + File.separator);
 					if(!resultsDir.exists()){
 						JOptionPane.showMessageDialog(ExperimentSettingsDialog.this, "Error: classifiers file must be located in the results folder (specified in"
 								+ "data settings). Current setting of results folder\n'" + DatasetSettings.getInstance().getResultFolder() + "'\ndoes not exist or does not contain subfolder 'fold_0'.\n"

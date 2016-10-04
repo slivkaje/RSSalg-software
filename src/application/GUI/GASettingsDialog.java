@@ -242,7 +242,7 @@ public class GASettingsDialog extends JDialog {
 		
 		DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
 		Calendar cal = Calendar.getInstance();
-		gaProperties.store(new FileOutputStream(path + "/GA.properties"), dateFormat.format(cal.getTime()));
+		gaProperties.store(new FileOutputStream(path + File.separator + "GA.properties"), dateFormat.format(cal.getTime()));
 	}
 	
 	private void loadProperties(String filePath) throws Exception{
@@ -259,7 +259,7 @@ public class GASettingsDialog extends JDialog {
 		setTitle("Genetic algorithm settings");
 		setResizable(false);
 		setModal(true);
-		setBounds(100, 100, 356, 403);
+		setBounds(100, 100, 421, 403);
 		setLocationRelativeTo(owner);
 		getContentPane().setLayout(new BorderLayout());
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -268,97 +268,98 @@ public class GASettingsDialog extends JDialog {
 		{
 			JLabel lblOptimizationMeasureClass = new JLabel("Optimization measure class:");
 			lblOptimizationMeasureClass.setHorizontalAlignment(SwingConstants.RIGHT);
-			lblOptimizationMeasureClass.setBounds(27, 262, 162, 16);
+			lblOptimizationMeasureClass.setBounds(10, 262, 251, 16);
 			contentPanel.add(lblOptimizationMeasureClass);
 		}
 		{
 			JLabel lblOptimizationMeasure = new JLabel("Optimization measure:");
 			lblOptimizationMeasure.setHorizontalAlignment(SwingConstants.RIGHT);
-			lblOptimizationMeasure.setBounds(55, 230, 134, 16);
+			lblOptimizationMeasure.setBounds(10, 230, 251, 16);
 			contentPanel.add(lblOptimizationMeasure);
 		}
 		{			
 			cbMeasure.setModel(new DefaultComboBoxModel<String>(new String[] {"Accuracy", "F1-measure", "Precision", "Recall"}));
-			cbMeasure.setBounds(194, 230, 134, 22);
+			cbMeasure.setBounds(271, 227, 134, 22);
 			contentPanel.add(cbMeasure);
 		}
 		{			
 			cbClass.setModel(new DefaultComboBoxModel<String>(new String[] {"not specified"}));
-			cbClass.setBounds(194, 262, 134, 22);
+			cbClass.setBounds(271, 259, 134, 22);
 			contentPanel.add(cbClass);
 		}
 		{
 			JLabel lblGenerationSize = new JLabel("Generation size:");
-			lblGenerationSize.setBounds(96, 16, 93, 16);
+			lblGenerationSize.setHorizontalAlignment(SwingConstants.RIGHT);
+			lblGenerationSize.setBounds(10, 11, 251, 16);
 			contentPanel.add(lblGenerationSize);
 		}
 		{			
 			tfGenerationSize.setText("50");
-			tfGenerationSize.setBounds(194, 13, 134, 22);
+			tfGenerationSize.setBounds(271, 8, 134, 22);
 			contentPanel.add(tfGenerationSize);
 		}
 		{
 			JLabel lblNumberOfIterations = new JLabel("Maximal number of iterations:");
 			lblNumberOfIterations.setHorizontalAlignment(SwingConstants.RIGHT);
-			lblNumberOfIterations.setBounds(17, 50, 172, 16);
+			lblNumberOfIterations.setBounds(10, 45, 251, 16);
 			contentPanel.add(lblNumberOfIterations);
 		}
 		{			
 			tfIts.setText("50");
-			tfIts.setBounds(194, 48, 134, 22);
+			tfIts.setBounds(271, 42, 134, 22);
 			contentPanel.add(tfIts);
 		}
 		{
 			JLabel lblGenerationsWithoutImproval = new JLabel("Generations without improval:");
 			lblGenerationsWithoutImproval.setHorizontalAlignment(SwingConstants.RIGHT);
-			lblGenerationsWithoutImproval.setBounds(12, 83, 177, 16);
+			lblGenerationsWithoutImproval.setBounds(10, 78, 251, 16);
 			contentPanel.add(lblGenerationsWithoutImproval);
 		}
 		{			
 			tfNoImproval.setText("5");
-			tfNoImproval.setBounds(194, 80, 134, 22);
+			tfNoImproval.setBounds(271, 75, 134, 22);
 			contentPanel.add(tfNoImproval);
 		}
 		{
 			JLabel lblCrossoverProbability = new JLabel("Crossover threshold:");
 			lblCrossoverProbability.setHorizontalAlignment(SwingConstants.RIGHT);
-			lblCrossoverProbability.setBounds(46, 115, 143, 16);
+			lblCrossoverProbability.setBounds(10, 111, 251, 16);
 			contentPanel.add(lblCrossoverProbability);
 		}
 		{			
 			tfCrossover.setText("0.3");
-			tfCrossover.setBounds(194, 112, 134, 22);
+			tfCrossover.setBounds(271, 108, 134, 22);
 			contentPanel.add(tfCrossover);
 		}
 		{
 			JLabel lblMutationThreshold = new JLabel("Mutation threshold:");
 			lblMutationThreshold.setHorizontalAlignment(SwingConstants.RIGHT);
-			lblMutationThreshold.setBounds(56, 147, 133, 16);
+			lblMutationThreshold.setBounds(10, 144, 251, 16);
 			contentPanel.add(lblMutationThreshold);
 		}
 		{			
 			tfMutation.setText("0.02");
-			tfMutation.setBounds(194, 144, 134, 22);
+			tfMutation.setBounds(271, 141, 134, 22);
 			contentPanel.add(tfMutation);
 		}
 		{			
 			chckbxElitism.setSelected(true);
-			chckbxElitism.setBounds(191, 202, 113, 25);
+			chckbxElitism.setBounds(271, 200, 113, 25);
 			contentPanel.add(chckbxElitism);
 		}
 		{
 			JLabel lblTestingThreshold = new JLabel("Testing threshold:");
 			lblTestingThreshold.setHorizontalAlignment(SwingConstants.RIGHT);
-			lblTestingThreshold.setBounds(66, 174, 123, 16);
+			lblTestingThreshold.setBounds(10, 174, 251, 16);
 			contentPanel.add(lblTestingThreshold);
 		}
 		{			
 			tfTesting.setText("20%");
-			tfTesting.setBounds(194, 171, 134, 22);
+			tfTesting.setBounds(271, 171, 134, 22);
 			contentPanel.add(tfTesting);
 		}
 		{			
-			cbLog.setBounds(194, 295, 113, 25);
+			cbLog.setBounds(271, 293, 113, 25);
 			contentPanel.add(cbLog);
 		}
 		{
@@ -373,7 +374,7 @@ public class GASettingsDialog extends JDialog {
 						chooser.setCurrentDirectory(new File(lastSaveFileLoc));
 						int returnVal = chooser.showOpenDialog(GASettingsDialog.this);
 						if(returnVal == JFileChooser.APPROVE_OPTION) {								
-							String filePath = chooser.getSelectedFile().getAbsolutePath() + "/GA.properties";
+							String filePath = chooser.getSelectedFile().getAbsolutePath() + File.separator + "GA.properties";
 							try{
 								loadProperties(filePath);						
 							}catch(Exception ex){
@@ -397,7 +398,7 @@ public class GASettingsDialog extends JDialog {
 							if(returnVal == JFileChooser.APPROVE_OPTION) {
 								try{
 									save(chooser.getSelectedFile().getAbsolutePath());
-									saveFileLoc = chooser.getSelectedFile().getAbsolutePath() + "/GA.properties";
+									saveFileLoc = chooser.getSelectedFile().getAbsolutePath() + File.separator + "GA.properties";
 									setVisible(false);
 									dispose();
 								}catch(Exception ex){

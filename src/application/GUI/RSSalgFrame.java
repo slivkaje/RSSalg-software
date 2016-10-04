@@ -122,7 +122,7 @@ public class RSSalgFrame extends JFrame {
 	public RSSalgFrame() {
 		setTitle("RSSalg software");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 556, 446);
+		setBounds(100, 100, 800, 446);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -130,23 +130,23 @@ public class RSSalgFrame extends JFrame {
 		
 		lblDataSettings = new JLabel("Dataset settings:");
 		lblDataSettings.setHorizontalAlignment(SwingConstants.RIGHT);
-		lblDataSettings.setBounds(48, 13, 108, 16);
+		lblDataSettings.setBounds(6, 17, 189, 16);
 		settingsPanel.add(lblDataSettings);
 		
 		tfDataSettings = new JTextField();
 		tfDataSettings.setEditable(false);
-		tfDataSettings.setBounds(162, 10, 306, 22);
+		tfDataSettings.setBounds(205, 14, 306, 22);
 		settingsPanel.add(tfDataSettings);
 		tfDataSettings.setColumns(10);
 		
 		lblCrossvalidationExperimentSettings = new JLabel("Cross-validation settings:");
 		lblCrossvalidationExperimentSettings.setHorizontalAlignment(SwingConstants.RIGHT);
-		lblCrossvalidationExperimentSettings.setBounds(6, 44, 150, 16);
+		lblCrossvalidationExperimentSettings.setBounds(6, 44, 189, 16);
 		settingsPanel.add(lblCrossvalidationExperimentSettings);
 		
 		tfCVSettings = new JTextField();
 		tfCVSettings.setEditable(false);
-		tfCVSettings.setBounds(162, 40, 306, 22);
+		tfCVSettings.setBounds(205, 41, 306, 22);
 		settingsPanel.add(tfCVSettings);
 		tfCVSettings.setColumns(10);
 		
@@ -181,7 +181,7 @@ public class RSSalgFrame extends JFrame {
 				}
 			}
 		});
-		btnDataSettings.setBounds(480, 9, 35, 25);
+		btnDataSettings.setBounds(523, 13, 35, 25);
 		settingsPanel.add(btnDataSettings);
 		
 		btnCVSettings = new JButton("...");
@@ -218,17 +218,17 @@ public class RSSalgFrame extends JFrame {
 			}
 		});
 		btnCVSettings.setEnabled(false);
-		btnCVSettings.setBounds(480, 38, 35, 25);
+		btnCVSettings.setBounds(523, 40, 35, 25);
 		settingsPanel.add(btnCVSettings);
 		
 		lblCotrainingProperties = new JLabel("Co-training properties:");
 		lblCotrainingProperties.setHorizontalAlignment(SwingConstants.RIGHT);
-		lblCotrainingProperties.setBounds(26, 73, 130, 16);
+		lblCotrainingProperties.setBounds(6, 73, 189, 16);
 		settingsPanel.add(lblCotrainingProperties);
 		
 		tfCoTrainingSettings = new JTextField();
 		tfCoTrainingSettings.setEditable(false);
-		tfCoTrainingSettings.setBounds(162, 70, 306, 22);
+		tfCoTrainingSettings.setBounds(205, 70, 306, 22);
 		settingsPanel.add(tfCoTrainingSettings);
 		tfCoTrainingSettings.setColumns(10);
 		
@@ -266,17 +266,17 @@ public class RSSalgFrame extends JFrame {
 			}
 		});
 		btnCTSettings.setEnabled(false);
-		btnCTSettings.setBounds(480, 67, 35, 25);
+		btnCTSettings.setBounds(523, 69, 35, 25);
 		settingsPanel.add(btnCTSettings);
 		
 		lblExperimentProperties = new JLabel("Experiment properties:");
 		lblExperimentProperties.setHorizontalAlignment(SwingConstants.RIGHT);
-		lblExperimentProperties.setBounds(6, 102, 150, 16);
+		lblExperimentProperties.setBounds(6, 102, 189, 16);
 		settingsPanel.add(lblExperimentProperties);
 		
 		tfExperimentProperties = new JTextField();
 		tfExperimentProperties.setEditable(false);
-		tfExperimentProperties.setBounds(162, 101, 306, 22);
+		tfExperimentProperties.setBounds(205, 99, 306, 22);
 		settingsPanel.add(tfExperimentProperties);
 		tfExperimentProperties.setColumns(10);
 		
@@ -314,7 +314,7 @@ public class RSSalgFrame extends JFrame {
 			}
 		});
 		btnExperimentProperties.setEnabled(false);
-		btnExperimentProperties.setBounds(480, 100, 35, 25);
+		btnExperimentProperties.setBounds(523, 98, 35, 25);
 		settingsPanel.add(btnExperimentProperties);
 		FlowLayout flowLayout = (FlowLayout) buttonsPanel.getLayout();
 		flowLayout.setAlignment(FlowLayout.RIGHT);
@@ -361,18 +361,18 @@ public class RSSalgFrame extends JFrame {
 			}
 		});
 		btnGAProperties.setEnabled(false);
-		btnGAProperties.setBounds(480, 131, 35, 25);
+		btnGAProperties.setBounds(523, 131, 35, 25);
 		settingsPanel.add(btnGAProperties);
 		
 		tfGAProperties = new JTextField();
 		tfGAProperties.setEditable(false);
 		tfGAProperties.setColumns(10);
-		tfGAProperties.setBounds(162, 133, 306, 22);
+		tfGAProperties.setBounds(205, 132, 306, 22);
 		settingsPanel.add(tfGAProperties);
 		
 		lblGeneticAlgorithmProperties = new JLabel("GA properties:");
 		lblGeneticAlgorithmProperties.setHorizontalAlignment(SwingConstants.RIGHT);
-		lblGeneticAlgorithmProperties.setBounds(70, 135, 86, 16);
+		lblGeneticAlgorithmProperties.setBounds(6, 135, 189, 16);
 		settingsPanel.add(lblGeneticAlgorithmProperties);
 		
 		panel = new JPanel();
@@ -394,7 +394,7 @@ public class RSSalgFrame extends JFrame {
 		contentPane.add(northPanel, BorderLayout.NORTH);
 		northPanel.setLayout(new FlowLayout());
 		northPanel.add(settingsPanel);
-		settingsPanel.setPreferredSize(new Dimension(525, 200));
+		settingsPanel.setPreferredSize(new Dimension(600, 200));
 		
 		btnClearSettings = new JButton("Clear settings");
 		btnClearSettings.addActionListener(new ActionListener() {
@@ -419,7 +419,7 @@ public class RSSalgFrame extends JFrame {
 				GASettings.getInstance().clear();				
 			}
 		});
-		btnClearSettings.setBounds(389, 169, 130, 25);
+		btnClearSettings.setBounds(397, 167, 161, 25);
 		settingsPanel.add(btnClearSettings);
 		
 		btnStartExperiment = new JButton("Start experiment");
@@ -453,61 +453,61 @@ public class RSSalgFrame extends JFrame {
 					}
 			}
 		});
-		btnStartExperiment.setBounds(105, 169, 130, 25);
+		btnStartExperiment.setBounds(55, 167, 161, 25);
 		
 		btnLoadAll = new JButton("Load all");
 		btnLoadAll.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				JFileChooser chooser = new JFileChooser();				
 				chooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);			
-				chooser.setCurrentDirectory(new File("./data"));
+				chooser.setCurrentDirectory(new File("." + File.separator + "data"));
 				int returnVal = chooser.showOpenDialog(RSSalgFrame.this);
 				if(returnVal == JFileChooser.APPROVE_OPTION) {								
 					String filePath = chooser.getSelectedFile().getAbsolutePath();
 					try{
-						DatasetSettings.getInstance().readProperties(filePath + "/data.properties");	
-						tfDataSettings.setText(filePath + "/data.properties"); 
+						DatasetSettings.getInstance().readProperties(filePath + File.separator + "data.properties");	
+						tfDataSettings.setText(filePath + File.separator + "data.properties"); 
 						btnCVSettings.setEnabled(true);
 						btnCTSettings.setEnabled(true);
 						btnExperimentProperties.setEnabled(true);
 						btnGAProperties.setEnabled(true);
 						
 						try{
-							CVSettings.getInstance().readProperties(filePath + "/cv.properties");	
-							tfCVSettings.setText(filePath + "/cv.properties"); 
+							CVSettings.getInstance().readProperties(filePath + File.separator + "cv.properties");	
+							tfCVSettings.setText(filePath + File.separator + "cv.properties"); 
 						}catch(Exception ex){
-							JOptionPane.showMessageDialog(RSSalgFrame.this, "Error loading cross-validation experiment properties from file '" + filePath + "/cv.properties'.\nReason: " + ex.getMessage(),
+							JOptionPane.showMessageDialog(RSSalgFrame.this, "Error loading cross-validation experiment properties from file '" + filePath + File.separator + "cv.properties'.\nReason: " + ex.getMessage(),
 									"Error loading CV settings", JOptionPane.ERROR_MESSAGE); 
 						}
 						try{
-							CoTrainingSettings.getInstance().readProperties(filePath + "/co-training.properties");	
-							tfCoTrainingSettings.setText(filePath + "/co-training.properties"); 
+							CoTrainingSettings.getInstance().readProperties(filePath + File.separator + "co-training.properties");	
+							tfCoTrainingSettings.setText(filePath + File.separator + "co-training.properties"); 
 						}catch(Exception ex){
-							JOptionPane.showMessageDialog(RSSalgFrame.this, "Error loading co-training properties from file '" + filePath + "/co-training.properties'.\nReason: " + ex.getMessage(),
+							JOptionPane.showMessageDialog(RSSalgFrame.this, "Error loading co-training properties from file '" + filePath + File.separator + "co-training.properties'.\nReason: " + ex.getMessage(),
 									"Error loading co-training settings", JOptionPane.ERROR_MESSAGE); 
 						}
 						try{
-							ExperimentSettings.getInstance().readProperties(filePath + "/Experiment_L.properties");	
-							tfExperimentProperties.setText(filePath + "/Experiment_L.properties"); 
+							ExperimentSettings.getInstance().readProperties(filePath + File.separator + "experiment_L.properties");	
+							tfExperimentProperties.setText(filePath + File.separator + "experiment_L.properties"); 
 						}catch(Exception ex){
-							JOptionPane.showMessageDialog(RSSalgFrame.this, "Error loading L experiment properties from file '" + filePath + "/Experiment_L.properties'.\nReason: " + ex.getMessage(),
+							JOptionPane.showMessageDialog(RSSalgFrame.this, "Error loading L experiment properties from file '" + filePath + File.separator + "experiment_L.properties'.\nReason: " + ex.getMessage(),
 									"Error loading L experiment settings", JOptionPane.ERROR_MESSAGE); 
 						}
 						try{
-							GASettings.getInstance().readProperties(filePath + "/GA.properties");	
-							tfGAProperties.setText(filePath + "/GA.properties"); 
+							GASettings.getInstance().readProperties(filePath + File.separator + "GA.properties");	
+							tfGAProperties.setText(filePath + File.separator + "GA.properties"); 
 						}catch(Exception ex){
-							JOptionPane.showMessageDialog(RSSalgFrame.this, "Error loading genetic algorithm experiment properties from file '" + filePath + "GA.properties'.\nReason: " + ex.getMessage(),
+							JOptionPane.showMessageDialog(RSSalgFrame.this, "Error loading genetic algorithm experiment properties from file '" + filePath + File.separator + "GA.properties'.\nReason: " + ex.getMessage(),
 									"Error loading GA settings", JOptionPane.ERROR_MESSAGE); 
 						}
 					}catch(Exception ex){
-						JOptionPane.showMessageDialog(RSSalgFrame.this, "Error loading dataset properties from file '" + filePath + "/data.properties'.\nReason: " + ex.getMessage(),
+						JOptionPane.showMessageDialog(RSSalgFrame.this, "Error loading dataset properties from file '" + filePath + File.separator + "data.properties'.\nReason: " + ex.getMessage(),
 								"Error loading dataset settings", JOptionPane.ERROR_MESSAGE); 
 					}
 				}
 			}
 		});
-		btnLoadAll.setBounds(247, 169, 130, 25);
+		btnLoadAll.setBounds(226, 167, 161, 25);
 		settingsPanel.add(btnLoadAll);
 		
 		

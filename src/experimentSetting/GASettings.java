@@ -119,7 +119,7 @@ public class GASettings {
 			properties = new Properties();
 			properties.load(new FileInputStream(propertiesFile));
 		}catch (FileNotFoundException e) {
-			throw new Exception("ERROR: error reading properties file: file " + propertiesFile + "does not exist", e);
+			throw new Exception("ERROR: error reading properties file: file '" + propertiesFile + "' does not exist", e);
 		}	
 		clear();
 		System.out.println("Reading GA properties from file: " + propertiesFile);

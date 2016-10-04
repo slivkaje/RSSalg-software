@@ -61,7 +61,7 @@ public class CVSettingsDialog extends JDialog {
 		int count = 0;
 		String ResultsFolderLoc = DatasetSettings.getInstance().getResultFolder();
 		while(true){
-			File fold = new File(ResultsFolderLoc + "/fold_" + count);
+			File fold = new File(ResultsFolderLoc + File.separator + "fold_" + count);
 			if(fold.exists())
 				count++;
 			else
@@ -83,7 +83,7 @@ public class CVSettingsDialog extends JDialog {
 				classNamesTableModel.addElement(new ClassNameElement(classNames.get(i), 1));
 		}else{			
 			String ResultsFolderLoc = DatasetSettings.getInstance().getResultFolder();			
-			CoTrainingData data = new CoTrainingData(ResultsFolderLoc + "/fold_0/", DatasetSettings.getInstance().getNoViews(), false);
+			CoTrainingData data = new CoTrainingData(ResultsFolderLoc + File.separator + "fold_0" + File.separator, DatasetSettings.getInstance().getNoViews(), false);
 			
 			for(int i=0; i<classNames.size(); i++){
 				String classAttName = DatasetSettings.getInstance().getClassAttributeName();
@@ -174,7 +174,7 @@ public class CVSettingsDialog extends JDialog {
 		
 		DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
 		Calendar cal = Calendar.getInstance();
-		cvPropertiesFile.store(new FileOutputStream(path + "/cv.properties"), dateFormat.format(cal.getTime()));
+		cvPropertiesFile.store(new FileOutputStream(path + File.separator + "cv.properties"), dateFormat.format(cal.getTime()));
 	}
 	
 	private void getCurrentSettings() throws Exception{
@@ -208,7 +208,7 @@ public class CVSettingsDialog extends JDialog {
 		setTitle("Cross-validation settings");
 		setResizable(false);
 		setModal(true);
-		setBounds(100, 100, 351, 307);
+		setBounds(100, 100, 447, 307);
 		setLocationRelativeTo(owner);
 		getContentPane().setLayout(new BorderLayout());
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -217,24 +217,24 @@ public class CVSettingsDialog extends JDialog {
 		{
 			JLabel label = new JLabel("Number of folds:");
 			label.setHorizontalAlignment(SwingConstants.RIGHT);
-			label.setBounds(22, 200, 101, 16);
+			label.setBounds(22, 200, 178, 16);
 			contentPanel.add(label);
 		}
 		{
 			tfNoFolds.setText("10");
 			tfNoFolds.setEnabled(false);
-			tfNoFolds.setBounds(131, 197, 50, 22);
+			tfNoFolds.setBounds(210, 197, 50, 22);
 			contentPanel.add(tfNoFolds);
 		}
 		{
 			JLabel label = new JLabel("Unlabeled folds:");
 			label.setHorizontalAlignment(SwingConstants.RIGHT);
-			label.setBounds(22, 146, 101, 16);
+			label.setBounds(22, 146, 178, 16);
 			contentPanel.add(label);
 		}
 		{
 			tfNoUnlabeled.setText("6");
-			tfNoUnlabeled.setBounds(131, 143, 50, 22);
+			tfNoUnlabeled.setBounds(210, 143, 50, 22);
 			contentPanel.add(tfNoUnlabeled);
 			tfNoUnlabeled.addFocusListener(new FocusAdapter() {
 				@Override
@@ -254,12 +254,12 @@ public class CVSettingsDialog extends JDialog {
 		{
 			JLabel label = new JLabel("Test folds:");
 			label.setHorizontalAlignment(SwingConstants.RIGHT);
-			label.setBounds(57, 172, 66, 16);
+			label.setBounds(12, 172, 188, 16);
 			contentPanel.add(label);
 		}
 		{			
 			tfNoTest.setText("4");
-			tfNoTest.setBounds(131, 170, 50, 22);
+			tfNoTest.setBounds(210, 169, 50, 22);
 			contentPanel.add(tfNoTest);
 			tfNoTest.addFocusListener(new FocusAdapter() {
 				@Override
@@ -277,18 +277,18 @@ public class CVSettingsDialog extends JDialog {
 			});
 		}
 		{
-			chckbxRemoveLabels.setBounds(189, 142, 113, 25);
+			chckbxRemoveLabels.setBounds(266, 142, 165, 25);
 			contentPanel.add(chckbxRemoveLabels);
 		}
 		{
 			JPanel panel = new JPanel();
 			panel.setLayout(null);
 			panel.setBorder(new TitledBorder(UIManager.getBorder("TitledBorder.border"), "Labeled instances", TitledBorder.LEADING, TitledBorder.TOP, null, null));
-			panel.setBounds(12, 13, 318, 124);
+			panel.setBounds(12, 13, 419, 124);
 			contentPanel.add(panel);
 			{
 				JScrollPane scrollPane = new JScrollPane();
-				scrollPane.setBounds(12, 24, 294, 87);
+				scrollPane.setBounds(12, 24, 397, 87);
 				panel.add(scrollPane);
 				{					
 					scrollPane.setViewportView(tableClassNames);
@@ -330,7 +330,7 @@ public class CVSettingsDialog extends JDialog {
 							chooser.setCurrentDirectory(new File(lastSaveFileLoc));
 							int returnVal = chooser.showOpenDialog(CVSettingsDialog.this);
 							if(returnVal == JFileChooser.APPROVE_OPTION) {								
-								String filePath = chooser.getSelectedFile().getAbsolutePath() + "/cv.properties";
+								String filePath = chooser.getSelectedFile().getAbsolutePath() + File.separator + "cv.properties";
 								try{
 									loadProperties(filePath);						
 								}catch(Exception ex){
@@ -377,7 +377,7 @@ public class CVSettingsDialog extends JDialog {
 	public String showDialog(){
 		setVisible(true);
 		if(saveFileLoc != null)
-			return saveFileLoc + "\\cv.properties";
+			return saveFileLoc + File.separator + "cv.properties";
 		else
 			return null;
 	}

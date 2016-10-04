@@ -1,12 +1,18 @@
 package application;
 
 import java.awt.EventQueue;
+import java.awt.Font;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.text.DecimalFormat;
 import java.util.List;
 import java.util.Random;
+
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
+import javax.swing.plaf.FontUIResource;
+
 import resultsToXML.ExperimentResults;
 import resultsToXML.Experiments;
 import resultsToXML.Measure;
@@ -36,7 +42,7 @@ public class StartExperiment {
 	 * @throws Exception if there is an error reading one of the properties files
 	 */
 	public static void setExperiment(String pathToPropertiesFolder, String experimentSettingsFile) throws Exception{
-		String filePath = pathToPropertiesFolder + "/";
+		String filePath = pathToPropertiesFolder + File.separator;
 		
 		try{
 			DatasetSettings.getInstance().readProperties(filePath + "data.properties");
@@ -91,7 +97,7 @@ public class StartExperiment {
 		String resultFolder = DatasetSettings.getInstance().getResultFolder();
 		for(int i=0; i<data.length; i++){
 			try {
-				data[i].saveData(resultFolder +"/fold_" + i + "/");										
+				data[i].saveData(resultFolder + File.separator + "fold_" + i + File.separator);										
 			} catch (IOException e) {		
 				e.printStackTrace();
 			}			
@@ -107,7 +113,7 @@ public class StartExperiment {
 		String path = DatasetSettings.getInstance().getResultFolder();
 		int count = 0;
 		while(true){
-			File subfolder = new File(path + "/fold_" + count);
+			File subfolder = new File(path + File.separator + "fold_" + count);
 			if(subfolder.exists())
 				count++;
 			else
@@ -124,7 +130,7 @@ public class StartExperiment {
 	 */
 	private CoTrainingData loadFold(int fold) throws Exception{
 		String path = DatasetSettings.getInstance().getResultFolder();
-		File subfolder = new File(path + "/fold_" + fold);
+		File subfolder = new File(path + File.separator + "fold_" + fold);
 		System.out.println("Reading " + subfolder.getPath());		
 		return new CoTrainingData(subfolder.getPath(), DatasetSettings.getInstance().getNoViews(), true);
 	}
@@ -141,7 +147,7 @@ public class StartExperiment {
 	 */
 	private void runCrossvalidation() throws Exception{
 		ExperimentResults results = new ExperimentResults();
-		results.fromXML(DatasetSettings.getInstance().getResultFolder() + "/Results.xml");
+		results.fromXML(DatasetSettings.getInstance().getResultFolder() + File.separator + "Results.xml");
 		
 		List<MeasureIF> measures = ExperimentSettings.getInstance().getMeasures();
 		Algorithm algorithm = ExperimentSettings.getInstance().getAlgorithm();
@@ -212,7 +218,7 @@ public class StartExperiment {
 					if(splitter != null)
 						fileName += "_" + splitter.getName();
 					fileName += ".xml";
-					FileOutputStream fs = new FileOutputStream(DatasetSettings.getInstance().getResultFolder()+"/fold_"+i + "/" + fileName, false);
+					FileOutputStream fs = new FileOutputStream(DatasetSettings.getInstance().getResultFolder()+ File.separator + "fold_"+i + File.separator + fileName, false);
 					classifiers.toXML(fs);
 					fs.close();
 				}
@@ -223,7 +229,7 @@ public class StartExperiment {
 					if(splitter != null)
 						fileName += "_" + splitter.getName();					
 					fileName += ".xml";
-					FileOutputStream fs = new FileOutputStream(DatasetSettings.getInstance().getResultFolder()+"/fold_"+i + "/" + fileName, false);
+					FileOutputStream fs = new FileOutputStream(DatasetSettings.getInstance().getResultFolder()+ File.separator+"fold_"+i + File.separator + fileName, false);
 					classifiersTestData.toXML(fs);
 					fs.close();
 				}
@@ -269,7 +275,7 @@ public class StartExperiment {
 			measure.setMacroAveraged(avgMesure);
 			measure.setStdDev(Math.sqrt(variance));
 		}
-		results.toXML(new FileOutputStream(new File(DatasetSettings.getInstance().getResultFolder() + "/Results.xml")));
+		results.toXML(new FileOutputStream(new File(DatasetSettings.getInstance().getResultFolder() + File.separator + "Results.xml")));
 		System.out.println();
 		System.out.println(results);
 		
@@ -320,6 +326,13 @@ public class StartExperiment {
 			}else{
 				EventQueue.invokeLater(new Runnable() {
 					public void run() {
+						try {
+							UIManager.setLookAndFeel(UIManager.getCrossPlatformLookAndFeelClassName());
+						} catch (ClassNotFoundException | InstantiationException | IllegalAccessException
+								| UnsupportedLookAndFeelException e) {
+							System.out.println("WARNING: Could not set the cross-platform look and feel.");
+							e.printStackTrace();
+						}
 						RSSalgFrame frame = new RSSalgFrame();
 						frame.setVisible(true);
 					}
