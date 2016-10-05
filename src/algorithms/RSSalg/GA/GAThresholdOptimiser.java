@@ -356,7 +356,7 @@ public class GAThresholdOptimiser {
 	
 	/**
 	 * Perform the single-point mutation [Goldberg 1989]<p>
-	 * D. Goldberg. Genetic algorithms in search, optimization and machine learning. Addison–Wesley, 1989.
+	 * D. Goldberg. Genetic algorithms in search, optimization and machine learning. Addison-Wesley, 1989.
 	 * @param candidate candidate to perform the mutation on
 	 */
 	private void mutation(Candidate candidate){

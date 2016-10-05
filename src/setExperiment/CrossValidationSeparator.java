@@ -42,7 +42,7 @@ import experimentSetting.DatasetSettings;
 /**
  * Loads the dataset and prepares the data for the n-fold-cross validation experiment described in:
  * <p>
- * F. Feger and I. Koprinska. Co–training Using RBF Nets and Different Feature Splits. In Proceedings of 2006 International Joint Conference on Neural Network, pp. 1878–1885, 2006.  
+ * F. Feger and I. Koprinska. Co-training Using RBF Nets and Different Feature Splits. In Proceedings of 2006 International Joint Conference on Neural Network, pp. 1878-1885, 2006.  
  */
 public class CrossValidationSeparator {	
 	/**

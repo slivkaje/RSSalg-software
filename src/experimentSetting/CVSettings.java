@@ -45,7 +45,7 @@ import util.PropertiesReader;
 /**
  * Singleton object encapsulating all experiment settings for n-fold-cross validation experiment described in:
  * <p>
- *  F. Feger and I. Koprinska. Co–training Using RBF Nets and Different Feature Splits. In Proceedings of 2006 International Joint Conference on Neural Network, pp. 1878–1885, 2006.
+ *  F. Feger and I. Koprinska. Co-training Using RBF Nets and Different Feature Splits. In Proceedings of 2006 International Joint Conference on Neural Network, pp. 1878-1885, 2006.
  */
 public class CVSettings {	
 	private static CVSettings instance = null; 
